@@ -70,11 +70,16 @@
 
 <p align="center">
 <a href="https://www.codecogs.com/eqnedit.php?latex=x[n]=x_c(nT)" target="_blank"><img src="https://latex.codecogs.com/svg.latex?x[n]=x_c(nT)" title="x[n]=x_c(nT)" /></a>
+</p>
 
+<p align="center">
 <a href="https://www.codecogs.com/eqnedit.php?latex=x_s(n)=x_c(t)s(t)" target="_blank"><img src="https://latex.codecogs.com/svg.latex?x_s(n)=x_c(t)s(t)" title="x_s(n)=x_c(t)s(t)" /></a>
+</p>
 
+<p align="center">
 <a href="https://www.codecogs.com/eqnedit.php?latex=s(t)=\sum_{k}\delta(t-kT)" target="_blank"><img src="https://latex.codecogs.com/svg.latex?s(t)=\sum_{k}\delta(t-kT)" title="s(t)=\sum_{k}\delta(t-kT)" /></a>
 </p>
+
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=\inline&space;T" target="_blank"><img src="https://latex.codecogs.com/svg.latex?\inline&space;T" title="T" /></a> 我們稱為 sampling period，<a href="https://www.codecogs.com/eqnedit.php?latex=\inline&space;f_s=1/T" target="_blank"><img src="https://latex.codecogs.com/svg.latex?\inline&space;f_s=1/T" title="f_s=1/T" /></a> 稱為 sampling frequency，<a href="https://www.codecogs.com/eqnedit.php?latex=\inline&space;\delta(t)" target="_blank"><img src="https://latex.codecogs.com/svg.latex?\inline&space;\delta(t)" title="\delta(t)" /></a> 稱為 the unit impulse function 或稱 Dirac delta function。<a href="https://www.codecogs.com/eqnedit.php?latex=\inline&space;x_s(n)" target="_blank"><img src="https://latex.codecogs.com/svg.latex?\inline&space;x_s(n)" title="x_s(n)" /></a> 仍視為 continuous signal，因為 [<a href="https://www.codecogs.com/eqnedit.php?latex=\inline&space;\delta(t)" target="_blank"><img src="https://latex.codecogs.com/svg.latex?\inline&space;\delta(t)" title="\delta(t)" /></a>](https://en.wikipedia.org/wiki/Dirac_delta_function) 的特性，<a href="https://www.codecogs.com/eqnedit.php?latex=\inline&space;x_s(n)" target="_blank"><img src="https://latex.codecogs.com/svg.latex?\inline&space;x_s(n)" title="x_s(n)" /></a> 可以寫成：
 
@@ -92,7 +97,9 @@
 
 <p align="center">
 <a href="https://www.codecogs.com/eqnedit.php?latex=x_s(n)=x_c(t)s(t)&space;\longleftrightarrow&space;\frac{1}{2\pi}X_c(j\Omega)*S(j\Omega)" target="_blank"><img src="https://latex.codecogs.com/svg.latex?x_s(n)=x_c(t)s(t)&space;\longleftrightarrow&space;\frac{1}{2\pi}X_c(j\Omega)*S(j\Omega)" title="x_s(n)=x_c(t)s(t) \longleftrightarrow \frac{1}{2\pi}X_c(j\Omega)*S(j\Omega)" /></a>
+</p>
 
+<p align="center">
 <a href="https://www.codecogs.com/eqnedit.php?latex=X_s(j\Omega)=\frac{1}{T}\sum_{k}X_c(j(\Omega-k\Omega_s)" target="_blank"><img src="https://latex.codecogs.com/svg.latex?X_s(j\Omega)=\frac{1}{T}\sum_{k}X_c(j(\Omega-k\Omega_s)" title="X_s(j\Omega)=\frac{1}{T}\sum_{k}X_c(j(\Omega-k\Omega_s)" /></a>
 </p>
 
