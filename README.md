@@ -28,6 +28,18 @@ Projects 1-6 要求同學將程式碼上傳至數位學苑或，
 助教先將各位同學的程式碼先以 [gcc](https://gcc.gnu.org/) 編譯，若編譯不過先退件，要求同學補交。
 Final Project有要求同學和任課老師約好demo時間，在指定的時間和老師及助教前demo程式並講解內容。
 
+## 授課老師資訊
+江振宇, 專任副教授, cychiang@mail.ntpu.edu.tw
+
+### Office hours:
+to be arranged
+
+### Office location:
+電8F11
+
+### 聯絡分機
+68805
+
 ## 助教資訊
 ### Primary 助教
 1. 林彥廷, 通訊碩二, d26923050@gmail.com
@@ -46,6 +58,7 @@ to be arranged
 
 ### 聯絡分機
 68858
+
 ## 課程大綱
 課程大綱及對應的演算法或系統實作如下表所示
 
