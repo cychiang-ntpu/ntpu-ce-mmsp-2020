@@ -26,7 +26,9 @@
 
 ## 2. Digital Data (Signal) Representation and Communication
 ### 2.1 Analog to Digital Conversion in Brief
-[以聲音信號為例，非常粗淺的說明投影片](SpeechA2D.pptx)
+以聲音信號為例，非常粗淺的說明投影片
+* pptx [SpeechA2D.pptx](SpeechA2D.pptx)
+* pdf  [SpeechA2D.pdf](SpeechA2D.pdf)
 
 ### 2.2 Why Digital?
 * 優點 (Pros)
@@ -44,7 +46,7 @@
 * Signal-to-Noise Ratio (SNR)
 * Signal-to-quantization-noise ratio (SQNR)
 
-### 2.5 Mini Project 1
+### 2.5 Mini Project 1 - Generating Sine Waves
 
 
 
