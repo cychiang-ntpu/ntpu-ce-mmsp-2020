@@ -4,7 +4,7 @@
 國立臺北大學通訊工程學系大三必修課
 
 ## 課程 github
-https://github.com/cychiang-ntpu/ntpu-ce-mmsp-2020
+[https://github.com/cychiang-ntpu/ntpu-ce-mmsp-2020](https://github.com/cychiang-ntpu/ntpu-ce-mmsp-2020)
 
 ## 教學目標
 “學為所用”、“將系統做出來！”，將課本中的演算法或系統，以程式語言 (C language)實現出來，以便讓學生自己檢驗是否已求甚解。學生有機會將大一到大三之間所修習過與“多媒體訊號處理”相關的課程做個綜合的整合，這些課程包含程式設計、微積分、機率、訊號與系統等，預計學生在修完此科目後，能具有將課本中的數學式、演算法甚至是系統實現出來的能力，達到學為所用的境界。
