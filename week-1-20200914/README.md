@@ -68,6 +68,9 @@
 
 ![](https://i.imgur.com/qH60D5D.png)
 
+![](https://i.imgur.com/lIfl9pF.png)
+
+
 <p align="center">
 <a href="https://www.codecogs.com/eqnedit.php?latex=x[n]=x_c(nT)" target="_blank"><img src="https://latex.codecogs.com/svg.latex?x[n]=x_c(nT)" title="x[n]=x_c(nT)" /></a>
 </p>
@@ -119,9 +122,54 @@
 取樣頻率(<a href="https://www.codecogs.com/eqnedit.php?latex=\inline&space;\Omega_s" target="_blank"><img src="https://latex.codecogs.com/svg.latex?\inline&space;\Omega_s" title="\Omega_s" /></a>) <a href="https://www.codecogs.com/eqnedit.php?latex=\inline&space;\geq" target="_blank"><img src="https://latex.codecogs.com/svg.latex?\inline&space;\geq" title="\geq" /></a> 兩倍信號的最高頻率成分(<a href="https://www.codecogs.com/eqnedit.php?latex=\inline&space;2\Omega_N" target="_blank"><img src="https://latex.codecogs.com/svg.latex?\inline&space;2\Omega_N" title="2\Omega_N" /></a>)，才有機會藉由 low pass filter 由 <a href="https://www.codecogs.com/eqnedit.php?latex=\inline&space;X_s(j\Omega)" target="_blank"><img src="https://latex.codecogs.com/svg.latex?\inline&space;X_s(j\Omega)" title="X_s(j\Omega)" /></a> 擷取其低頻成分恢復成原信號 <a href="https://www.codecogs.com/eqnedit.php?latex=\inline&space;X_c(j\Omega)" target="_blank"><img src="https://latex.codecogs.com/svg.latex?\inline&space;X_c(j\Omega)" title="X_c(j\Omega)" /></a>
 * Aliasing: 若 <a href="https://www.codecogs.com/eqnedit.php?latex=\inline&space;\Omega_s<2\Omega_N" target="_blank"><img src="https://latex.codecogs.com/svg.latex?\inline&space;\Omega_s<2\Omega_N" title="\Omega_s<2\Omega_N" /></a>，則原本信號的部分頻率成分遭到污染的現象。
 
+<p align="center">
+<a href="https://www.codecogs.com/eqnedit.php?latex=x[n]=x_c(nT)" target="_blank"><img src="https://latex.codecogs.com/svg.latex?x[n]=x_c(nT)" title="x[n]=x_c(nT)" /></a>
+</p>
+
+<p align="center">
+<a href="https://www.codecogs.com/eqnedit.php?latex=x_c(t)=sin(2\pi&space;ft)" target="_blank"><img src="https://latex.codecogs.com/svg.latex?x_c(t)=sin(2\pi&space;ft)" title="x_c(t)=sin(2\pi ft)" /></a>
+</p>
+
+* Case 1: No aliasing
+<p align="center">
+<a href="https://www.codecogs.com/eqnedit.php?latex=T=1/8000&space;\text{&space;and&space;}&space;f=3000" target="_blank"><img src="https://latex.codecogs.com/svg.latex?T=1/8000&space;\text{&space;and&space;}&space;f=3000" title="T=1/8000 \text{ and } f=3000" /></a>
+</p>
+
+<p align="center">
+<a href="https://www.codecogs.com/eqnedit.php?latex=x[n]=x_c(nT)=sin(2\pi&space;\times&space;3000&space;\times&space;\frac{n}{8000})" target="_blank"><img src="https://latex.codecogs.com/svg.latex?x_1[n]=x_c(nT)=sin(2\pi&space;\times&space;3000&space;\times&space;\frac{n}{8000})" title="x[n]=x_c(nT)=sin(2\pi \times 3000 \times \frac{n}{8000})" /></a>
+</p>
+
+* Case 2: Aliasing
+<p align="center">
+<a href="https://www.codecogs.com/eqnedit.php?latex=T=1/8000&space;\text{&space;and&space;}&space;f=5000" target="_blank"><img src="https://latex.codecogs.com/svg.latex?T=1/8000&space;\text{&space;and&space;}&space;f=5000" title="T=1/8000 \text{ and } f=5000" /></a>
+</p>
+
+<a href="https://www.codecogs.com/eqnedit.php?latex=x[n]=x_c(nT)=sin(2\pi&space;\times&space;5000&space;\times&space;\frac{n}{8000})&space;=&space;sin(2\pi&space;\times&space;3000&space;\times&space;\frac{n}{8000})" target="_blank"><img src="https://latex.codecogs.com/svg.latex?x_2[n]=x_c(nT)=sin(2\pi&space;\times&space;5000&space;\times&space;\frac{n}{8000})&space;=&space;sin(2\pi&space;\times&space;3000&space;\times&space;\frac{n}{8000})" title="x[n]=x_c(nT)=sin(2\pi \times 5000 \times \frac{n}{8000}) = sin(2\pi \times 3000 \times \frac{n}{8000})" /></a>
+
 ### 2.4 Quantization
-* Quantization level
-* Linear or non-linear quantization
+* Linear (uniform) Quantization
+<p align="center">
+<a href="https://www.codecogs.com/eqnedit.php?latex=Q(x[n])=\Delta&space;\cdot&space;\lfloor&space;\frac{x[n]}{\Delta}&plus;\frac{1}{2}\rfloor=\Delta&space;\cdot&space;floor(\frac{x[n]}{\Delta}&plus;\frac{1}{2})" target="_blank"><img src="https://latex.codecogs.com/svg.latex?Q(x[n])=\Delta&space;\cdot&space;\lfloor&space;\frac{x[n]}{\Delta}&plus;\frac{1}{2}\rfloor=\Delta&space;\cdot&space;floor(\frac{x[n]}{\Delta}&plus;\frac{1}{2})" title="Q(x[n])=\Delta \cdot \lfloor \frac{x[n]}{\Delta}+\frac{1}{2}\rfloor=\Delta \cdot floor(\frac{x[n]}{\Delta}+\frac{1}{2})" /></a>
+</p>
+
+我們稱 <a href="https://www.codecogs.com/eqnedit.php?latex=\inline&space;\Delta" target="_blank"><img src="https://latex.codecogs.com/svg.latex?\inline&space;\Delta" title="\Delta" /></a> 為 quantization step size 
+
+![](https://i.imgur.com/BX2N2Gv.png)
+
+![](https://i.imgur.com/oY2uyVZ.png)
+
+![](https://i.imgur.com/kZCwCnb.png)
+Example of quantization noise. (a) Unquantized samples of the signal x[n] = 0.99 cos(n/10). (b) Quantized samples of the cosine waveform in part (a) with a 3-bit quantizer. (c) Quantization error sequence for 3-bit quantization of the signal in (a). (d) Quantization error sequence for 8-bit quantization of the signal in (a).
+
+![](https://i.imgur.com/4L7Uxeq.png)
+> https://www.beis.de/Elektronik/DeltaSigma/DeltaSigma.html
+
+![](https://i.imgur.com/gmDNYjm.png)
+> https://www.beis.de/Elektronik/DeltaSigma/DeltaSigma.html
+
+* Non-linear quantization
+    * [A-law](https://en.wikipedia.org/wiki/A-law_algorithm)
+    * [mu-law](https://en.wikipedia.org/wiki/%CE%9C-law_algorithm)
 * Sample size or bit depth (color depth for images)
 * Quantization Error/Noise
 * Signal-to-Noise Ratio (SNR)
