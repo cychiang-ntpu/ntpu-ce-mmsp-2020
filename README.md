@@ -47,10 +47,10 @@ Final Project有要求同學和任課老師約好 demo 時間，在指定的時�
 
 #### 遲交處理原則
 編譯不過，在繳交期限內皆可補繳，不扣分，但在超過繳交期限後繳交，使用以下數學式進行評分：
+<center> <img src="http://latex.codecogs.com/gif.latex?y=({\frac{9}{10}})^{\frac{d}{7}}\times x" /> </center>
 
-$$`y=({\frac{9}{10}})^{\frac{d}{7}}\times x`$$
 
-其中 $`d`$ 為遲交的天數，$`x`$ 為編譯後得到的分數。
+其中 <img src="http://latex.codecogs.com/gif.latex?d" /> 為遲交的天數，<img src="http://latex.codecogs.com/gif.latex?x" /> 為編譯後得到的分數。
 
 
 ## 授課老師資訊
