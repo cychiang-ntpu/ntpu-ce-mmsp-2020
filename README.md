@@ -6,6 +6,13 @@
 ## 課程 github
 [https://github.com/cychiang-ntpu/ntpu-ce-mmsp-2020](https://github.com/cychiang-ntpu/ntpu-ce-mmsp-2020)
 
+## 課程 slack
+我們會使用 [slack](https://slack.com/intl/en-tw/) (即時通訊軟體) 讓學生方便線上詢問課程相關問題（指定時間，不是24hr無休），請使用以下連結加入：
+
+https://join.slack.com/t/ntpu-ce-mmsp-2020/shared_invite/zt-hcvpqicz-gqnUHJjH5PsYdf7B4x~b8A
+
+***This link will expire in 30 days (Tuesday, October 13th)***
+
 ## 教學目標
 “學為所用”、“將系統做出來！”，將課本中的演算法或系統，以程式語言 (C language)實現出來，以便讓學生自己檢驗是否已求甚解。學生有機會將大一到大三之間所修習過與“多媒體訊號處理”相關的課程做個綜合的整合，這些課程包含程式設計、微積分、機率、訊號與系統等，預計學生在修完此科目後，能具有將課本中的數學式、演算法甚至是系統實現出來的能力，達到學為所用的境界。
 
@@ -16,26 +23,41 @@
 4. 以程式語言實作基礎多媒體訊號處理系統
 
 ## 評分方式
-本課程的評分是以 mini project 為主，針對 mini project 中 C 語言程式實作的內容做評分，評分基準為
+英文「Talk is cheap, show me the code」
+
+中文「廢話少說，放碼過來」
+
+本課程的評分是以 mini project 為主 (95%)，沒有紙筆考試，點名 (5%)，針對 mini project 中 C 語言程式實作的內容做評分，評分基準為：
 1. 程式正確性 60%
-   (1) 答案完全正確100%, 
-   (2) 答案部分正確  50%
+    * 答案完全正確: 得100%的分數
+    * 答案部分正確: 得50%~70%的分數
+    * 程式碼有對題，但答案完全不對: 得30%~40%的分數
+    * 編譯 (compile) 不過，或隨意上傳無相關程式碼，敷衍了事: 得 0% 的分數
 2. 程式可讀性 25%
-   (1)註解 50%, 
-   (2)排版 50%
+    * 註解 50% 
+    * 排版 50%
 3. 程式效率性 15%
-   (1) 執行速率 100%
+    * 執行速率 100%
+
 
 共有 5-6 次 mini project，一次 final project。
 Projects 1-6 要求同學將程式碼上傳至數位學苑或，
 助教先將各位同學的程式碼先以 [gcc](https://gcc.gnu.org/) 編譯，若編譯不過先退件，要求同學補交。
-Final Project有要求同學和任課老師約好demo時間，在指定的時間和老師及助教前demo程式並講解內容。
+Final Project有要求同學和任課老師約好 demo 時間，在指定的時間和老師及助教前 (1) 投影片報告、(2)demo程式並講解程式內容。***Final Project 人未到現場 demo 直接被當掉。***
+
+#### 遲交處理原則
+編譯不過，在繳交期限內皆可補繳，不扣分，但在超過繳交期限後繳交，使用以下數學式進行評分：
+
+$$y=({\frac{9}{10}})^{\frac{d}{7}}\times x$$
+
+其中 $d$ 為遲交的天數，$x$ 為編譯後得到的分數。
+
 
 ## 授課老師資訊
 江振宇, 專任副教授, cychiang@mail.ntpu.edu.tw
 
 ### Office hours:
-to be arranged
+TBA (to be arranged)
 
 ### Office location:
 電8F11
@@ -51,13 +73,15 @@ to be arranged
 ### 支援助教
 1. 李武豪, 通訊博二, hank12451@gmail.com
 2. 洪紹瑋, 通訊碩二, pisces860224@gmail.com
-3. 林書磊, 通訊碩一, st23990504@gmail.co
+3. 林書磊, 通訊碩一, st23990504@gmail.com
 
 ### Office hours:
-to be arranged
+* face to face: TBA
+* slack: TBA
 
 ### Office location:
-電5F12
+* 電5F12 for face to face
+* slack for remote
 
 ### 聯絡分機
 68858
