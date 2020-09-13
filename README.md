@@ -28,8 +28,27 @@ Projects 1-6 要求同學將程式碼上傳至數位學苑或，
 助教先將各位同學的程式碼先以 [gcc](https://gcc.gnu.org/) 編譯，若編譯不過先退件，要求同學補交。
 Final Project有要求同學和任課老師約好demo時間，在指定的時間和老師及助教前demo程式並講解內容。
 
+## 助教資訊
+### Primary 助教
+1. 林彥廷, 通訊碩二, d26923050@gmail.com
+2. 林品翰, 通訊碩一, joseph861030@gmail.com
+
+### 支援助教
+1. 李武豪, 通訊博二, hank12451@gmail.com
+2. 洪紹瑋, 通訊碩二, pisces860224@gmail.com
+3. 林書磊, 通訊碩一, st23990504@gmail.co
+
+### Office hours:
+to be arranged
+
+### Office location:
+電5F12
+
+### 聯絡分機
+68858
 ## 課程大綱
 課程大綱及對應的演算法或系統實作如下表所示
+
 |週次| 日期 |課堂教學綱要|演算法或系統實作|
 |:-:|:----:| ----------|--------------|
 | 1 | 20200914 | Course Outline & Digital Data Representation and Communication | Project-1: Generating Sine Waves |
