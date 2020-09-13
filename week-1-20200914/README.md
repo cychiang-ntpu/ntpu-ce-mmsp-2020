@@ -68,23 +68,33 @@
 
 ![](https://i.imgur.com/qH60D5D.png)
 
-$$x[n]=x_c(nT)$$
-$$x_s(n)=x_c(t)s(t)$$
-$$s(t)=\sum_{k}\delta(t-kT)$$
+<p align="center">
+<a href="https://www.codecogs.com/eqnedit.php?latex=x[n]=x_c(nT)" target="_blank"><img src="https://latex.codecogs.com/svg.latex?x[n]=x_c(nT)" title="x[n]=x_c(nT)" /></a>
 
-$T$ 我們稱為 sampling period，$f_s=1/T$ 稱為 sampling frequency，$\delta(t)$ 稱為 the unit impulse function 或稱 Dirac delta function。$x_s(n)$ 仍視為 continuous signal，因為 [$\delta(t)$](https://en.wikipedia.org/wiki/Dirac_delta_function) 的特性，$x_s(n)$ 可以寫成：
+<a href="https://www.codecogs.com/eqnedit.php?latex=x_s(n)=x_c(t)s(t)" target="_blank"><img src="https://latex.codecogs.com/svg.latex?x_s(n)=x_c(t)s(t)" title="x_s(n)=x_c(t)s(t)" /></a>
 
-$$x_s(t)=\sum_{n}x_c(nT)\delta(t-nT)$$
+<a href="https://www.codecogs.com/eqnedit.php?latex=s(t)=\sum_{k}\delta(t-kT)" target="_blank"><img src="https://latex.codecogs.com/svg.latex?s(t)=\sum_{k}\delta(t-kT)" title="s(t)=\sum_{k}\delta(t-kT)" /></a>
+</p>
+
+<a href="https://www.codecogs.com/eqnedit.php?latex=\inline&space;T" target="_blank"><img src="https://latex.codecogs.com/svg.latex?\inline&space;T" title="T" /></a> 我們稱為 sampling period，<a href="https://www.codecogs.com/eqnedit.php?latex=\inline&space;f_s=1/T" target="_blank"><img src="https://latex.codecogs.com/svg.latex?\inline&space;f_s=1/T" title="f_s=1/T" /></a> 稱為 sampling frequency，<a href="https://www.codecogs.com/eqnedit.php?latex=\inline&space;\delta(t)" target="_blank"><img src="https://latex.codecogs.com/svg.latex?\inline&space;\delta(t)" title="\delta(t)" /></a> 稱為 the unit impulse function 或稱 Dirac delta function。<a href="https://www.codecogs.com/eqnedit.php?latex=\inline&space;x_s(n)" target="_blank"><img src="https://latex.codecogs.com/svg.latex?\inline&space;x_s(n)" title="x_s(n)" /></a> 仍視為 continuous signal，因為 [<a href="https://www.codecogs.com/eqnedit.php?latex=\inline&space;\delta(t)" target="_blank"><img src="https://latex.codecogs.com/svg.latex?\inline&space;\delta(t)" title="\delta(t)" /></a>](https://en.wikipedia.org/wiki/Dirac_delta_function) 的特性，<a href="https://www.codecogs.com/eqnedit.php?latex=\inline&space;x_s(n)" target="_blank"><img src="https://latex.codecogs.com/svg.latex?\inline&space;x_s(n)" title="x_s(n)" /></a> 可以寫成：
+
+<p align="center">
+<a href="https://www.codecogs.com/eqnedit.php?latex=x_s(t)=\sum_{n}x_c(nT)\delta(t-nT)" target="_blank"><img src="https://latex.codecogs.com/svg.latex?x_s(t)=\sum_{n}x_c(nT)\delta(t-nT)" title="x_s(t)=\sum_{n}x_c(nT)\delta(t-nT)" /></a>
+</p>
 
 由 signals and systems 課程知道，在時間軸上是 impulse，頻率軸上也是 impulse:
 
-$$s(t)=\sum_{k}\delta(t-kT) \longleftrightarrow S(j\Omega)=\frac{2\pi}{T}\sum_{k}\delta(\Omega-k\Omega_s)$$
+<p align="center">
+<a href="https://www.codecogs.com/eqnedit.php?latex=s(t)=\sum_{k}\delta(t-kT)&space;\longleftrightarrow&space;S(j\Omega)=\frac{2\pi}{T}\sum_{k}\delta(\Omega-k\Omega_s)" target="_blank"><img src="https://latex.codecogs.com/svg.latex?s(t)=\sum_{k}\delta(t-kT)&space;\longleftrightarrow&space;S(j\Omega)=\frac{2\pi}{T}\sum_{k}\delta(\Omega-k\Omega_s)" title="s(t)=\sum_{k}\delta(t-kT) \longleftrightarrow S(j\Omega)=\frac{2\pi}{T}\sum_{k}\delta(\Omega-k\Omega_s)" /></a>
+</p>
 
-其中 $\Omega_s=2\pi/T$ 是以 radians/s 為單位的取樣頻率
+其中 <a href="https://www.codecogs.com/eqnedit.php?latex=\inline&space;\Omega_s=2\pi/T" target="_blank"><img src="https://latex.codecogs.com/svg.latex?\inline&space;\Omega_s=2\pi/T" title="\Omega_s=2\pi/T" /></a> 是以 radians/s 為單位的取樣頻率
 
-$$x_s(n)=x_c(t)s(t) \longleftrightarrow \frac{1}{2\pi}X_c(j\Omega)*S(j\Omega)$$
+<p align="center">
+<a href="https://www.codecogs.com/eqnedit.php?latex=x_s(n)=x_c(t)s(t)&space;\longleftrightarrow&space;\frac{1}{2\pi}X_c(j\Omega)*S(j\Omega)" target="_blank"><img src="https://latex.codecogs.com/svg.latex?x_s(n)=x_c(t)s(t)&space;\longleftrightarrow&space;\frac{1}{2\pi}X_c(j\Omega)*S(j\Omega)" title="x_s(n)=x_c(t)s(t) \longleftrightarrow \frac{1}{2\pi}X_c(j\Omega)*S(j\Omega)" /></a>
 
-$$X_s(j\Omega)=\frac{1}{T}\sum_{k}X_c(j(\Omega-k\Omega_s)$$
+<a href="https://www.codecogs.com/eqnedit.php?latex=X_s(j\Omega)=\frac{1}{T}\sum_{k}X_c(j(\Omega-k\Omega_s)" target="_blank"><img src="https://latex.codecogs.com/svg.latex?X_s(j\Omega)=\frac{1}{T}\sum_{k}X_c(j(\Omega-k\Omega_s)" title="X_s(j\Omega)=\frac{1}{T}\sum_{k}X_c(j(\Omega-k\Omega_s)" /></a>
+</p>
 
 --- 
 
@@ -99,8 +109,8 @@ $$X_s(j\Omega)=\frac{1}{T}\sum_{k}X_c(j(\Omega-k\Omega_s)$$
 ---
 
 * Nyquist Theorem:
-取樣頻率($\Omega_s$) $\geq$ 兩倍信號的最高頻率成分($2\Omega_N$)，才有機會藉由 low pass filter 由 $X_s(j\Omega)$ 擷取其低頻成分恢復成原信號 $X_c(j\Omega)$
-* Aliasing: 若 $\Omega_s<2\Omega_N$，則原本信號的部分頻率成分遭到污染的現象。
+取樣頻率(<a href="https://www.codecogs.com/eqnedit.php?latex=\inline&space;\Omega_s" target="_blank"><img src="https://latex.codecogs.com/svg.latex?\inline&space;\Omega_s" title="\Omega_s" /></a>) <a href="https://www.codecogs.com/eqnedit.php?latex=\inline&space;\geq" target="_blank"><img src="https://latex.codecogs.com/svg.latex?\inline&space;\geq" title="\geq" /></a> 兩倍信號的最高頻率成分(<a href="https://www.codecogs.com/eqnedit.php?latex=\inline&space;2\Omega_N" target="_blank"><img src="https://latex.codecogs.com/svg.latex?\inline&space;2\Omega_N" title="2\Omega_N" /></a>)，才有機會藉由 low pass filter 由 <a href="https://www.codecogs.com/eqnedit.php?latex=\inline&space;X_s(j\Omega)" target="_blank"><img src="https://latex.codecogs.com/svg.latex?\inline&space;X_s(j\Omega)" title="X_s(j\Omega)" /></a> 擷取其低頻成分恢復成原信號 <a href="https://www.codecogs.com/eqnedit.php?latex=\inline&space;X_c(j\Omega)" target="_blank"><img src="https://latex.codecogs.com/svg.latex?\inline&space;X_c(j\Omega)" title="X_c(j\Omega)" /></a>
+* Aliasing: 若 <a href="https://www.codecogs.com/eqnedit.php?latex=\inline&space;\Omega_s<2\Omega_N" target="_blank"><img src="https://latex.codecogs.com/svg.latex?\inline&space;\Omega_s<2\Omega_N" title="\Omega_s<2\Omega_N" /></a>，則原本信號的部分頻率成分遭到污染的現象。
 
 ### 2.4 Quantization
 * Quantization level
