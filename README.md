@@ -3,7 +3,8 @@
 
 國立臺北大學通訊工程學系大三必修課
 
-電1F06
+教室：電1F06
+時間：星期一 5~7
 
 ## 課程 github
 [https://github.com/cychiang-ntpu/ntpu-ce-mmsp-2020](https://github.com/cychiang-ntpu/ntpu-ce-mmsp-2020)
