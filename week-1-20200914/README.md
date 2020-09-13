@@ -1,6 +1,6 @@
 # ntpu-ce-mmsp-2020-Week-1-20200914
 
-## Introduction to Multimedia Signal Processing
+## 1. Introduction to Multimedia Signal Processing
 * 使用者介面/人機介面 (User Interface/Human-Machine Interface)
     * 喇叭/麥克風 (Loud speaker/Microphone)
     * 螢幕/攝影機 (Monitor/Camera)
@@ -23,6 +23,31 @@
     * 內容識別 (content recognition/identification)
 
 ![](https://i.imgur.com/HoaWsh7.png)
+
+## 2. Digital Data (Signal) Representation and Communication
+### 2.1 Analog to Digital Conversion in Brief
+[以聲音信號為例，非常粗淺的說明投影片](SpeechA2D.pptx)
+
+### 2.2 Why Digital?
+* 優點 (Pros)
+* 缺點 (Cons)
+
+### 2.3 Sampling
+* Nyquist Theorem
+* Aliasing
+
+### 2.4 Quantization
+* Quantization level
+* Linear or non-linear quantization
+* Sample size or bit depth (color depth for images)
+* Quantization Error/Noise
+* Signal-to-Noise Ratio (SNR)
+* Signal-to-quantization-noise ratio (SQNR)
+
+### 2.5 Mini Project 1
+
+
+
 
 
 
