@@ -25,7 +25,7 @@
 
 共有 5-6 次 mini project，一次 final project。
 Projects 1-6 要求同學將程式碼上傳至數位學苑或，
-助教先將各位同學的程式碼先放到linux server上以gcc 編譯，若編譯不過先退件，要求同學補交。
+助教先將各位同學的程式碼先以gcc 編譯，若編譯不過先退件，要求同學補交。
 Final Project有要求同學和任課老師約好demo時間，在指定的時間和老師及助教前demo程式並講解內容。
 
 ## 課程大綱
