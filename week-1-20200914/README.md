@@ -65,6 +65,9 @@
 * Digital 缺點 (Cons)
 
 ### 2.3 Ideal Periodic Sampling
+Sampling: A process of converting a signal (e.g., a function of continuous time or space) into a numeric sequence (a function of discrete time or space)
+* For images the sample points are evenly separated in space
+* For sound the sample points are evenly separated in time
 
 ![](https://i.imgur.com/qH60D5D.png)
 
@@ -84,7 +87,7 @@
 </p>
 
 
-<a href="https://www.codecogs.com/eqnedit.php?latex=\inline&space;T" target="_blank"><img src="https://latex.codecogs.com/svg.latex?\inline&space;T" title="T" /></a> 我們稱為 sampling period，<a href="https://www.codecogs.com/eqnedit.php?latex=\inline&space;f_s=1/T" target="_blank"><img src="https://latex.codecogs.com/svg.latex?\inline&space;f_s=1/T" title="f_s=1/T" /></a> 稱為 sampling frequency，<a href="https://www.codecogs.com/eqnedit.php?latex=\inline&space;\delta(t)" target="_blank"><img src="https://latex.codecogs.com/svg.latex?\inline&space;\delta(t)" title="\delta(t)" /></a> 稱為 the unit impulse function 或稱 Dirac delta function。<a href="https://www.codecogs.com/eqnedit.php?latex=\inline&space;x_s(n)" target="_blank"><img src="https://latex.codecogs.com/svg.latex?\inline&space;x_s(n)" title="x_s(n)" /></a> 仍視為 continuous signal，因為 [<a href="https://www.codecogs.com/eqnedit.php?latex=\inline&space;\delta(t)" target="_blank"><img src="https://latex.codecogs.com/svg.latex?\inline&space;\delta(t)" title="\delta(t)" /></a>](https://en.wikipedia.org/wiki/Dirac_delta_function) 的特性，<a href="https://www.codecogs.com/eqnedit.php?latex=\inline&space;x_s(n)" target="_blank"><img src="https://latex.codecogs.com/svg.latex?\inline&space;x_s(n)" title="x_s(n)" /></a> 可以寫成：
+<a href="https://www.codecogs.com/eqnedit.php?latex=\inline&space;T" target="_blank"><img src="https://latex.codecogs.com/svg.latex?\inline&space;T" title="T" /></a> 我們稱為 sampling period，<a href="https://www.codecogs.com/eqnedit.php?latex=\inline&space;f_s=1/T" target="_blank"><img src="https://latex.codecogs.com/svg.latex?\inline&space;f_s=1/T" title="f_s=1/T" /></a> 稱為 sampling frequency (或 sampling rate、resolution)，<a href="https://www.codecogs.com/eqnedit.php?latex=\inline&space;\delta(t)" target="_blank"><img src="https://latex.codecogs.com/svg.latex?\inline&space;\delta(t)" title="\delta(t)" /></a> 稱為 the unit impulse function 或稱 Dirac delta function。<a href="https://www.codecogs.com/eqnedit.php?latex=\inline&space;x_s(n)" target="_blank"><img src="https://latex.codecogs.com/svg.latex?\inline&space;x_s(n)" title="x_s(n)" /></a> 仍視為 continuous signal，因為 [<a href="https://www.codecogs.com/eqnedit.php?latex=\inline&space;\delta(t)" target="_blank"><img src="https://latex.codecogs.com/svg.latex?\inline&space;\delta(t)" title="\delta(t)" /></a>](https://en.wikipedia.org/wiki/Dirac_delta_function) 的特性，<a href="https://www.codecogs.com/eqnedit.php?latex=\inline&space;x_s(n)" target="_blank"><img src="https://latex.codecogs.com/svg.latex?\inline&space;x_s(n)" title="x_s(n)" /></a> 可以寫成：
 
 <p align="center">
 <a href="https://www.codecogs.com/eqnedit.php?latex=x_s(t)=\sum_{n}x_c(nT)\delta(t-nT)" target="_blank"><img src="https://latex.codecogs.com/svg.latex?x_s(t)=\sum_{n}x_c(nT)\delta(t-nT)" title="x_s(t)=\sum_{n}x_c(nT)\delta(t-nT)" /></a>
@@ -105,6 +108,9 @@
 <p align="center">
 <a href="https://www.codecogs.com/eqnedit.php?latex=X_s(j\Omega)=\frac{1}{T}\sum_{k}X_c(j(\Omega-k\Omega_s)" target="_blank"><img src="https://latex.codecogs.com/svg.latex?X_s(j\Omega)=\frac{1}{T}\sum_{k}X_c(j(\Omega-k\Omega_s)" title="X_s(j\Omega)=\frac{1}{T}\sum_{k}X_c(j(\Omega-k\Omega_s)" /></a>
 </p>
+
+
+
 
 --- 
 
@@ -130,29 +136,46 @@
 <a href="https://www.codecogs.com/eqnedit.php?latex=x_c(t)=sin(2\pi&space;ft)" target="_blank"><img src="https://latex.codecogs.com/svg.latex?x_c(t)=sin(2\pi&space;ft)" title="x_c(t)=sin(2\pi ft)" /></a>
 </p>
 
+* Nyquist Rate vs. Nyquist Frequency
+    * 兩者不要搞混
+    * Nyquist Rate = <a href="https://www.codecogs.com/eqnedit.php?latex=\inline&space;f_s" target="_blank"><img src="https://latex.codecogs.com/svg.latex?\inline&space;f_s" title="f_s" /></a>
+    * Nyquist Frequency = <a href="https://www.codecogs.com/eqnedit.php?latex=\inline&space;f_s/2" target="_blank"><img src="https://latex.codecogs.com/svg.latex?\inline&space;f_s/2" title="f_s/2" /></a>
+
 * Case 1: No aliasing
 <p align="center">
-<a href="https://www.codecogs.com/eqnedit.php?latex=T=1/8000&space;\text{&space;and&space;}&space;f=3000" target="_blank"><img src="https://latex.codecogs.com/svg.latex?T=1/8000&space;\text{&space;and&space;}&space;f=3000" title="T=1/8000 \text{ and } f=3000" /></a>
+<a href="https://www.codecogs.com/eqnedit.php?latex=T=1/f_s=1/8000&space;\text{&space;and&space;}&space;f=3000" target="_blank"><img src="https://latex.codecogs.com/svg.latex?T=1/f_s=1/8000&space;\text{&space;and&space;}&space;f=3000" title="T=1/8000 \text{ and } f=3000" /></a>
 </p>
 
 <p align="center">
 <a href="https://www.codecogs.com/eqnedit.php?latex=x[n]=x_c(nT)=sin(2\pi&space;\times&space;3000&space;\times&space;\frac{n}{8000})" target="_blank"><img src="https://latex.codecogs.com/svg.latex?x_1[n]=x_c(nT)=sin(2\pi&space;\times&space;3000&space;\times&space;\frac{n}{8000})" title="x[n]=x_c(nT)=sin(2\pi \times 3000 \times \frac{n}{8000})" /></a>
 </p>
 
-* Case 2: Aliasing
+* Case 2: Aliasing (undersampling)
 <p align="center">
-<a href="https://www.codecogs.com/eqnedit.php?latex=T=1/8000&space;\text{&space;and&space;}&space;f=5000" target="_blank"><img src="https://latex.codecogs.com/svg.latex?T=1/8000&space;\text{&space;and&space;}&space;f=5000" title="T=1/8000 \text{ and } f=5000" /></a>
+<a href="https://www.codecogs.com/eqnedit.php?latex=T=1/f_s=1/8000&space;\text{&space;and&space;}&space;f=5000" target="_blank"><img src="https://latex.codecogs.com/svg.latex?T=1/f_s=1/8000&space;\text{&space;and&space;}&space;f=5000" title="T=1/8000 \text{ and } f=5000" /></a>
 </p>
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=x[n]=x_c(nT)=sin(2\pi&space;\times&space;5000&space;\times&space;\frac{n}{8000})&space;=&space;sin(2\pi&space;\times&space;3000&space;\times&space;\frac{n}{8000})" target="_blank"><img src="https://latex.codecogs.com/svg.latex?x_2[n]=x_c(nT)=sin(2\pi&space;\times&space;5000&space;\times&space;\frac{n}{8000})&space;=&space;sin(2\pi&space;\times&space;3000&space;\times&space;\frac{n}{8000})" title="x[n]=x_c(nT)=sin(2\pi \times 5000 \times \frac{n}{8000}) = sin(2\pi \times 3000 \times \frac{n}{8000})" /></a>
 
+* Undersampling means the sampling rate did not keep up with the rate of change of pattern in the image or sound
+* In digital image arises from undersampling and results in an image that does not match the original source, it may be blurred or have a false pattern similarly for audio wave
+
+
+
 ### 2.4 Quantization
+* Requires that each sample be represented in a fixed number of bits, called the ***sample size*** or equivalently the ***bit depth***.
+* Bit depth is for limiting ***precision*** with which each sample can be represented.
+* For digital images, each sample represents a color at a discrete point in a two dimensional image.
+* Number of colors possible is determined by the sample size or bit depth (color depth for images)
 * Linear (uniform) Quantization
 <p align="center">
 <a href="https://www.codecogs.com/eqnedit.php?latex=Q(x[n])=\Delta&space;\cdot&space;\lfloor&space;\frac{x[n]}{\Delta}&plus;\frac{1}{2}\rfloor=\Delta&space;\cdot&space;floor(\frac{x[n]}{\Delta}&plus;\frac{1}{2})" target="_blank"><img src="https://latex.codecogs.com/svg.latex?Q(x[n])=\Delta&space;\cdot&space;\lfloor&space;\frac{x[n]}{\Delta}&plus;\frac{1}{2}\rfloor=\Delta&space;\cdot&space;floor(\frac{x[n]}{\Delta}&plus;\frac{1}{2})" title="Q(x[n])=\Delta \cdot \lfloor \frac{x[n]}{\Delta}+\frac{1}{2}\rfloor=\Delta \cdot floor(\frac{x[n]}{\Delta}+\frac{1}{2})" /></a>
 </p>
 
-我們稱 <a href="https://www.codecogs.com/eqnedit.php?latex=\inline&space;\Delta" target="_blank"><img src="https://latex.codecogs.com/svg.latex?\inline&space;\Delta" title="\Delta" /></a> 為 quantization step size 
+* 我們稱 <a href="https://www.codecogs.com/eqnedit.php?latex=\inline&space;\Delta" target="_blank"><img src="https://latex.codecogs.com/svg.latex?\inline&space;\Delta" title="\Delta" /></a> 為 quantization step size 
+* In general, if <a href="https://www.codecogs.com/eqnedit.php?latex=\inline&space;m" target="_blank"><img src="https://latex.codecogs.com/svg.latex?\inline&space;m" title="m" /></a> is the number of bits used to quantize a digital sample, then the maximum number of different values (***quantization levels***) that can be represented, <a href="https://www.codecogs.com/eqnedit.php?latex=\inline&space;L=2^m" target="_blank"><img src="https://latex.codecogs.com/svg.latex?\inline&space;L=2^m" title="L=2^m" /></a>.
+* 影像儲存方面，一般使用R、G、B三元素儲存，則每個 pixel (picture element) 顏色可以使用8個 bits 表示，也就是量化為 256 個 quantization level
+* 音訊方面常使用的的 sample size 是 16bits (65,532 levels) 或 32bits (4,294,967,296 levels)
 
 ![](https://i.imgur.com/BX2N2Gv.png)
 
@@ -170,9 +193,30 @@ Example of quantization noise. (a) Unquantized samples of the signal x[n] = 0.99
 * Non-linear quantization
     * [A-law](https://en.wikipedia.org/wiki/A-law_algorithm)
     * [mu-law](https://en.wikipedia.org/wiki/%CE%9C-law_algorithm)
-* Sample size or bit depth (color depth for images)
+
 * Quantization Error/Noise
-* Signal-to-Noise Ratio (SNR)
+<p align="center">
+<a href="https://www.codecogs.com/eqnedit.php?latex=e[n]=Q(x[n])-x[n]" target="_blank"><img src="https://latex.codecogs.com/svg.latex?e[n]=Q(x[n])-x[n]" title="e[n]=Q(x[n])-x[n]" /></a>
+</p>
+
+* **Signal-to-Noise Ratio (SNR)**: 所指為有用訊號功率（Power of Signal）與雜訊功率（Power of Noise）的比：
+
+<a href="https://www.codecogs.com/eqnedit.php?latex=SNR=\frac{P_{signal}}{P_{noise}}" target="_blank"><img src="https://latex.codecogs.com/svg.latex?SNR=\frac{P_{signal}}{P_{noise}}" title="SNR=\frac{P_{signal}}{P_{noise}}" /></a>
+
+其中 <a href="https://www.codecogs.com/eqnedit.php?latex=P_{signal}" target="_blank"><img src="https://latex.codecogs.com/svg.latex?P_{signal}" title="P_{signal}" /></a> 為訊號的 power (或稱 intensity)，<a href="https://www.codecogs.com/eqnedit.php?latex=P_{noise}" target="_blank"><img src="https://latex.codecogs.com/svg.latex?P_{noise}" title="P_{noise}" /></a>為噪音的 power，因為知道 <a href="https://www.codecogs.com/eqnedit.php?latex=P=V^2/R" target="_blank"><img src="https://latex.codecogs.com/svg.latex?P=V^2/R" title="P=V^2/R" /></a>，所以 SNR 也可以定義為：
+
+<a href="https://www.codecogs.com/eqnedit.php?latex=SNR=\frac{A_{signal}^2}{A_{noise}^2}" target="_blank"><img src="https://latex.codecogs.com/svg.latex?SNR=\frac{A_{signal}^2}{A_{noise}^2}" title="SNR=\frac{A_{signal}^2}{A_{noise}^2}" /></a>
+
+其中 <a href="https://www.codecogs.com/eqnedit.php?latex=\inline&space;A_{signal}" target="_blank"><img src="https://latex.codecogs.com/svg.latex?\inline&space;A_{signal}" title="A_{signal}" /></a> 為訊號振幅 (amplitude of signal)，通常是定義為訊號的最大振幅，而 <a href="https://www.codecogs.com/eqnedit.php?latex=\inline&space;A_{noise}" target="_blank"><img src="https://latex.codecogs.com/svg.latex?\inline&space;A_{noise}" title="A_{noise}" /></a> 為噪音振幅 (amplitude of noise)，通常是定義為噪音的最大振幅。
+
+為了方便SNR的數字以及對應人所能對應的感知大小，SNR習慣上使用分貝(dB)作為單為，其值為十倍對數訊號與雜訊功率比：
+
+<a href="https://www.codecogs.com/eqnedit.php?latex=SNR(dB)=10&space;log10(\frac{P_{signal}}{P_{noise}})" target="_blank"><img src="https://latex.codecogs.com/svg.latex?SNR(dB)=10&space;log10(\frac{P_{signal}}{P_{noise}})" title="SNR(dB)=10 log10(\frac{P_{signal}}{P_{noise}})" /></a>
+
+或
+
+<a href="https://www.codecogs.com/eqnedit.php?latex=SNR(dB)=20&space;log10(\frac{A_{signal}}{A_{noise}})" target="_blank"><img src="https://latex.codecogs.com/svg.latex?SNR(dB)=20&space;log10(\frac{A_{signal}}{A_{noise}})" title="SNR(dB)=20 log10(\frac{A_{signal}}{A_{noise}})" /></a>
+
 * Signal-to-quantization-noise ratio (SQNR)
 
 ### 2.5 Mini Project 1 - Generating Sine Waves
