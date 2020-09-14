@@ -201,25 +201,71 @@ Example of quantization noise. (a) Unquantized samples of the signal x[n] = 0.99
 
 * **Signal-to-Noise Ratio (SNR)**: 所指為有用訊號功率（Power of Signal）與雜訊功率（Power of Noise）的比：
 
+<p align="center">
 <a href="https://www.codecogs.com/eqnedit.php?latex=SNR=\frac{P_{signal}}{P_{noise}}" target="_blank"><img src="https://latex.codecogs.com/svg.latex?SNR=\frac{P_{signal}}{P_{noise}}" title="SNR=\frac{P_{signal}}{P_{noise}}" /></a>
+</p>
 
 其中 <a href="https://www.codecogs.com/eqnedit.php?latex=P_{signal}" target="_blank"><img src="https://latex.codecogs.com/svg.latex?P_{signal}" title="P_{signal}" /></a> 為訊號的 power (或稱 intensity)，<a href="https://www.codecogs.com/eqnedit.php?latex=P_{noise}" target="_blank"><img src="https://latex.codecogs.com/svg.latex?P_{noise}" title="P_{noise}" /></a>為噪音的 power，因為知道 <a href="https://www.codecogs.com/eqnedit.php?latex=P=V^2/R" target="_blank"><img src="https://latex.codecogs.com/svg.latex?P=V^2/R" title="P=V^2/R" /></a>，所以 SNR 也可以定義為：
 
+<p align="center">
 <a href="https://www.codecogs.com/eqnedit.php?latex=SNR=\frac{A_{signal}^2}{A_{noise}^2}" target="_blank"><img src="https://latex.codecogs.com/svg.latex?SNR=\frac{A_{signal}^2}{A_{noise}^2}" title="SNR=\frac{A_{signal}^2}{A_{noise}^2}" /></a>
+</p>
 
 其中 <a href="https://www.codecogs.com/eqnedit.php?latex=\inline&space;A_{signal}" target="_blank"><img src="https://latex.codecogs.com/svg.latex?\inline&space;A_{signal}" title="A_{signal}" /></a> 為訊號振幅 (amplitude of signal)，通常是定義為訊號的最大振幅，而 <a href="https://www.codecogs.com/eqnedit.php?latex=\inline&space;A_{noise}" target="_blank"><img src="https://latex.codecogs.com/svg.latex?\inline&space;A_{noise}" title="A_{noise}" /></a> 為噪音振幅 (amplitude of noise)，通常是定義為噪音的最大振幅。
 
 為了方便SNR的數字以及對應人所能對應的感知大小，SNR習慣上使用分貝(dB)作為單為，其值為十倍對數訊號與雜訊功率比：
 
+<p align="center">
 <a href="https://www.codecogs.com/eqnedit.php?latex=SNR(dB)=10&space;log10(\frac{P_{signal}}{P_{noise}})" target="_blank"><img src="https://latex.codecogs.com/svg.latex?SNR(dB)=10&space;log10(\frac{P_{signal}}{P_{noise}})" title="SNR(dB)=10 log10(\frac{P_{signal}}{P_{noise}})" /></a>
+</p>
 
 或
 
+<p align="center">
 <a href="https://www.codecogs.com/eqnedit.php?latex=SNR(dB)=20&space;log10(\frac{A_{signal}}{A_{noise}})" target="_blank"><img src="https://latex.codecogs.com/svg.latex?SNR(dB)=20&space;log10(\frac{A_{signal}}{A_{noise}})" title="SNR(dB)=20 log10(\frac{A_{signal}}{A_{noise}})" /></a>
+</p>
 
 * Signal-to-quantization-noise ratio (SQNR)
 
+<p align="center">
+<a href="https://www.codecogs.com/eqnedit.php?latex=\inline&space;SQNR(dB)=10log10(\frac{P}{P_0})" target="_blank"><img src="https://latex.codecogs.com/svg.latex?\inline&space;SQNR(dB)=10log10(\frac{P}{P_0})" title="SQNR(dB)=10log10(\frac{P}{P_0})" /></a>
+</p>
+
+其中 <a href="https://www.codecogs.com/eqnedit.php?latex=\inline&space;P" target="_blank"><img src="https://latex.codecogs.com/svg.latex?\inline&space;P" title="P" /></a> 代表原本信號的 power，<a href="https://www.codecogs.com/eqnedit.php?latex=\inline&space;P_0" target="_blank"><img src="https://latex.codecogs.com/svg.latex?\inline&space;P_0" title="P_0" /></a> 為 quantization noise 的 power，我們可以用以下的數學是來計算 signal power 以及 quantiztion noise 的 power：
+
+<p align="center">
+<a href="https://www.codecogs.com/eqnedit.php?latex=P=E[x^2[n]]=\frac{1}{N}\sum_{n=0}^{N-1}x^2[n]" target="_blank"><img src="https://latex.codecogs.com/svg.latex?P=E[x^2[n]]=\frac{1}{N}\sum_{n=0}^{N-1}x^2[n]" title="P=E[x^2[n]]=\frac{1}{N}\sum_{n=0}^{N-1}x^2[n]" /></a>
+</p>
+
+<p align="center">
+<a href="https://www.codecogs.com/eqnedit.php?latex=P_0=E[e^2[n]]=\frac{1}{N}\sum_{n=0}^{N-1}e^2[n]" target="_blank"><img src="https://latex.codecogs.com/svg.latex?P_0=E[e^2[n]]=\frac{1}{N}\sum_{n=0}^{N-1}e^2[n]" title="P_0=E[e^2[n]]=\frac{1}{N}\sum_{n=0}^{N-1}e^2[n]" /></a>
+</p>
+
+* **Dynamic range**: SQNR is directly related to Dynamic range. 動態範圍是描述量化後的信號能夠如何細緻描述信號振幅變化的量，並不是用來信號值域 (domain) 的範圍，我們也可以使用 SQNR 來敘述數位信號的 dynamic range，動態範圍越大則 SQNR 越大，通常我們直接用原信號的最大振幅和 quantization error 最大振幅的比值來作為數位訊號的 dynamic range (或直接代表 SQNR)，假如數位訊號的 quantization levels 為 <a href="https://www.codecogs.com/eqnedit.php?latex=\inline&space;L=2^m" target="_blank"><img src="https://latex.codecogs.com/svg.latex?\inline&space;L=2^m" title="L=2^m" /></a>，則此數位訊號的 dynamic range 為：
+
+<p align="center">
+<a href="https://www.codecogs.com/eqnedit.php?latex=\inline&space;SQNR(dB)=10log10(\frac{(0.5\Delta)^2}{(2^m\Delta})^2)=20log10(2^m)\approx&space;6.02m" target="_blank"><img src="https://latex.codecogs.com/svg.latex?\inline&space;SQNR(dB)=10log10(\frac{(0.5\Delta)^2}{(2^m\Delta})^2)=20log10(2^m)\approx&space;6.02m" title="SQNR(dB)=10log10(\frac{(0.5\Delta)^2}{(2^m\Delta})^2)=20log10(2^m)\approx 6.02m" /></a>
+</p>
+
+
 ### 2.5 Mini Project 1 - Generating Sine Waves
+撰寫一支 C 語言程式 sinegen_xxxxxxxxx.c，其中 xxxxxxxxx 代表你的學號，在 compile 和 link 後的執行檔可以使用方法產生弦波的 wav file 和計算 SQNR：
+
+`sinegen_xxxxxxxxx fs m f A T  1> fn.wav 2> sqnr.txt`
+
+參數說明如下：
+
+| 參數 | 意義 | 單位 | applicable values |
+| -------- | -------- | -------- | -------|
+| fs     | 取樣率    | Hz | 8000/16000/22050/44100     |
+| m      | sample size | bit | 8/16/32 |
+| f      | 訊號頻率  | Hz | 取決於 fs     |
+| A      | 振幅     | Hz | 取決於 m     |
+| T      | 產生的弦波長度 | second | possible real value |
+
+輸出：
+1. fn.wav 為 WAV檔的檔名，格式為 [WAV](https://zh.wikipedia.org/wiki/WAV) 
+2. sqnr.txt 為 txt 的檔名，請將 SQNR 以 ASCII 表示 (四捨五入) 到小數點 15 位的
 
 
 
