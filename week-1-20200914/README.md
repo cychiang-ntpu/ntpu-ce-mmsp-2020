@@ -244,12 +244,12 @@ Example of quantization noise. (a) Unquantized samples of the signal x[n] = 0.99
 * **Dynamic range**: SQNR is directly related to Dynamic range. 動態範圍是描述量化後的信號能夠如何細緻描述信號振幅變化的量，並不是用來信號值域 (domain) 的範圍，我們也可以使用 SQNR 來敘述數位信號的 dynamic range，動態範圍越大則 SQNR 越大，通常我們直接用原信號的最大振幅和 quantization error 最大振幅的比值來作為數位訊號的 dynamic range (或直接代表 SQNR)，假如數位訊號的 quantization levels 為 <a href="https://www.codecogs.com/eqnedit.php?latex=\inline&space;L=2^m" target="_blank"><img src="https://latex.codecogs.com/svg.latex?\inline&space;L=2^m" title="L=2^m" /></a>，則此數位訊號的 dynamic range 為：
 
 <p align="center">
-<a href="https://www.codecogs.com/eqnedit.php?latex=\inline&space;SQNR(dB)=10log10(\frac{(0.5\Delta)^2}{(2^m\Delta})^2)=20log10(2^m)\approx&space;6.02m" target="_blank"><img src="https://latex.codecogs.com/svg.latex?\inline&space;SQNR(dB)=10log10(\frac{(0.5\Delta)^2}{(2^m\Delta})^2)=20log10(2^m)\approx&space;6.02m" title="SQNR(dB)=10log10(\frac{(0.5\Delta)^2}{(2^m\Delta})^2)=20log10(2^m)\approx 6.02m" /></a>
+<a href="https://www.codecogs.com/eqnedit.php?latex=\inline&space;SQNR(dB)=10log10(\frac{(2^{m-1}\Delta)^2}{(0.5\Delta)^2})=20log10(2^m)\approx&space;6.02m" target="_blank"><img src="https://latex.codecogs.com/svg.latex?\inline&space;SQNR(dB)=10log10(\frac{(2^{m-1}\Delta)^2}{(0.5\Delta)^2})=20log10(2^m)\approx&space;6.02m" title="SQNR(dB)=10log10(\frac{(2^{m-1}\Delta)^2}{(0.5\Delta)^2})=20log10(2^m)\approx 6.02m" /></a>
 </p>
 
 
 ### 2.5 Mini Project 1 - Generating Sine Waves
-撰寫一支 C 語言程式 sinegen_xxxxxxxxx.c，其中 xxxxxxxxx 代表你的學號，在 compile 和 link 後的執行檔可以使用方法產生弦波的 wav file 和計算 SQNR：
+撰寫一支 C 語言程式 sinegen_xxxxxxxxx.c，其中 xxxxxxxxx 代表你的學號，在 compile 和 link 後的執行檔，可以使用以下方法產生弦波的 wav file 和計算 SQNR：
 
 `sinegen_xxxxxxxxx fs m f A T  1> fn.wav 2> sqnr.txt`
 
@@ -264,8 +264,8 @@ Example of quantization noise. (a) Unquantized samples of the signal x[n] = 0.99
 | T      | 產生的弦波長度 | second | possible real value |
 
 輸出：
-1. fn.wav 為 WAV檔的檔名，格式為 [WAV](https://zh.wikipedia.org/wiki/WAV) 
-2. sqnr.txt 為 txt 的檔名，請將 SQNR 以 ASCII 表示 (四捨五入) 到小數點 15 位的
+1. fn.wav 為 WAV 檔的檔名，格式為 [WAV](https://zh.wikipedia.org/wiki/WAV) 
+2. sqnr.txt 為 txt 的檔名，請將 SQNR 以 [ASCII](https://zh.wikipedia.org/wiki/ASCII) 的 [plain text](https://zh.wikipedia.org/wiki/%E6%96%87%E6%9C%AC%E6%96%87%E4%BB%B6) 表示 (四捨五入) 到小數點 15 位的
 
 
 
