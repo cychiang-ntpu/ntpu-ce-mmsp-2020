@@ -79,7 +79,7 @@ Sampling: A process of converting a signal (e.g., a function of continuous time 
 </p>
 
 <p align="center">
-<a href="https://www.codecogs.com/eqnedit.php?latex=x_s(n)=x_c(t)s(t)" target="_blank"><img src="https://latex.codecogs.com/svg.latex?x_s(n)=x_c(t)s(t)" title="x_s(n)=x_c(t)s(t)" /></a>
+<a href="https://www.codecogs.com/eqnedit.php?latex=x_s(t)=x_c(t)s(t)" target="_blank"><img src="https://latex.codecogs.com/svg.latex?x_s(t)=x_c(t)s(t)" title="x_s(t)=x_c(t)s(t)" /></a>
 </p>
 
 <p align="center">
@@ -87,7 +87,7 @@ Sampling: A process of converting a signal (e.g., a function of continuous time 
 </p>
 
 
-<a href="https://www.codecogs.com/eqnedit.php?latex=\inline&space;T" target="_blank"><img src="https://latex.codecogs.com/svg.latex?\inline&space;T" title="T" /></a> 我們稱為 sampling period，<a href="https://www.codecogs.com/eqnedit.php?latex=\inline&space;f_s=1/T" target="_blank"><img src="https://latex.codecogs.com/svg.latex?\inline&space;f_s=1/T" title="f_s=1/T" /></a> 稱為 sampling frequency (或 sampling rate、resolution)，<a href="https://www.codecogs.com/eqnedit.php?latex=\inline&space;\delta(t)" target="_blank"><img src="https://latex.codecogs.com/svg.latex?\inline&space;\delta(t)" title="\delta(t)" /></a> 稱為 the unit impulse function 或稱 Dirac delta function。<a href="https://www.codecogs.com/eqnedit.php?latex=\inline&space;x_s(n)" target="_blank"><img src="https://latex.codecogs.com/svg.latex?\inline&space;x_s(n)" title="x_s(n)" /></a> 仍視為 continuous signal，因為 [<a href="https://www.codecogs.com/eqnedit.php?latex=\inline&space;\delta(t)" target="_blank"><img src="https://latex.codecogs.com/svg.latex?\inline&space;\delta(t)" title="\delta(t)" /></a>](https://en.wikipedia.org/wiki/Dirac_delta_function) 的特性，<a href="https://www.codecogs.com/eqnedit.php?latex=\inline&space;x_s(n)" target="_blank"><img src="https://latex.codecogs.com/svg.latex?\inline&space;x_s(n)" title="x_s(n)" /></a> 可以寫成：
+<a href="https://www.codecogs.com/eqnedit.php?latex=\inline&space;T" target="_blank"><img src="https://latex.codecogs.com/svg.latex?\inline&space;T" title="T" /></a> 我們稱為 sampling period，<a href="https://www.codecogs.com/eqnedit.php?latex=\inline&space;f_s=1/T" target="_blank"><img src="https://latex.codecogs.com/svg.latex?\inline&space;f_s=1/T" title="f_s=1/T" /></a> 稱為 sampling frequency (或 sampling rate、resolution)，<a href="https://www.codecogs.com/eqnedit.php?latex=\inline&space;\delta(t)" target="_blank"><img src="https://latex.codecogs.com/svg.latex?\inline&space;\delta(t)" title="\delta(t)" /></a> 稱為 the unit impulse function 或稱 Dirac delta function。<a href="https://www.codecogs.com/eqnedit.php?latex=\inline&space;x_s(n)" target="_blank"><img src="https://latex.codecogs.com/svg.latex?\inline&space;x_s(t)" title="x_s(t)" /></a> 仍視為 continuous signal，因為 [<a href="https://www.codecogs.com/eqnedit.php?latex=\inline&space;\delta(t)" target="_blank"><img src="https://latex.codecogs.com/svg.latex?\inline&space;\delta(t)" title="\delta(t)" /></a>](https://en.wikipedia.org/wiki/Dirac_delta_function) 的特性，<a href="https://www.codecogs.com/eqnedit.php?latex=\inline&space;x_s(n)" target="_blank"><img src="https://latex.codecogs.com/svg.latex?\inline&space;x_s(t)" title="x_s(t)" /></a> 可以寫成：
 
 <p align="center">
 <a href="https://www.codecogs.com/eqnedit.php?latex=x_s(t)=\sum_{n}x_c(nT)\delta(t-nT)" target="_blank"><img src="https://latex.codecogs.com/svg.latex?x_s(t)=\sum_{n}x_c(nT)\delta(t-nT)" title="x_s(t)=\sum_{n}x_c(nT)\delta(t-nT)" /></a>
@@ -102,7 +102,7 @@ Sampling: A process of converting a signal (e.g., a function of continuous time 
 其中 <a href="https://www.codecogs.com/eqnedit.php?latex=\inline&space;\Omega_s=2\pi/T" target="_blank"><img src="https://latex.codecogs.com/svg.latex?\inline&space;\Omega_s=2\pi/T" title="\Omega_s=2\pi/T" /></a> 是以 radians/s 為單位的取樣頻率
 
 <p align="center">
-<a href="https://www.codecogs.com/eqnedit.php?latex=x_s(n)=x_c(t)s(t)&space;\longleftrightarrow&space;\frac{1}{2\pi}X_c(j\Omega)*S(j\Omega)" target="_blank"><img src="https://latex.codecogs.com/svg.latex?x_s(n)=x_c(t)s(t)&space;\longleftrightarrow&space;\frac{1}{2\pi}X_c(j\Omega)*S(j\Omega)" title="x_s(n)=x_c(t)s(t) \longleftrightarrow \frac{1}{2\pi}X_c(j\Omega)*S(j\Omega)" /></a>
+<a href="https://www.codecogs.com/eqnedit.php?latex=x_s(t)=x_c(t)s(t)&space;\longleftrightarrow&space;\frac{1}{2\pi}X_c(j\Omega)*S(j\Omega)" target="_blank"><img src="https://latex.codecogs.com/svg.latex?x_s(t)=x_c(t)s(t)&space;\longleftrightarrow&space;\frac{1}{2\pi}X_c(j\Omega)*S(j\Omega)" title="x_s(t)=x_c(t)s(t) \longleftrightarrow \frac{1}{2\pi}X_c(j\Omega)*S(j\Omega)" /></a>
 </p>
 
 <p align="center">
@@ -196,7 +196,7 @@ Example of quantization noise. (a) Unquantized samples of the signal x[n] = 0.99
 
 * Quantization Error/Noise
 <p align="center">
-<a href="https://www.codecogs.com/eqnedit.php?latex=e[n]=Q(x[n])-x[n]" target="_blank"><img src="https://latex.codecogs.com/svg.latex?e[n]=Q(x[n])-x[n]" title="e[n]=Q(x[n])-x[n]" /></a>
+<a href="https://www.codecogs.com/eqnedit.php?latex=e[n]=x[n]-Q(x[n])" target="_blank"><img src="https://latex.codecogs.com/svg.latex?e[n]=x[n]-Q(x[n])" title="e[n]=x[n]-Q(x[n])" /></a>
 </p>
 
 * **Signal-to-Noise Ratio (SNR)**: 所指為有用訊號功率（Power of Signal）與雜訊功率（Power of Noise）的比：
