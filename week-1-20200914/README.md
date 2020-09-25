@@ -26,8 +26,7 @@
 ![](https://i.imgur.com/HoaWsh7.png)
 
 #### 上課影片
-
-{% youtube -CKb8SYPrms %}
+https://youtu.be/-CKb8SYPrms
 
 
 ## 2. Digital Data (Signal) Representation and Communication
