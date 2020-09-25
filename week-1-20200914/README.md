@@ -1,6 +1,9 @@
 # ntpu-ce-mmsp-2020-Week-1-20200914
 
 ## 1. Introduction to Multimedia Signal Processing
+
+上課影片 https://youtu.be/-CKb8SYPrms
+
 * 使用者介面/人機介面 (User Interface/Human-Machine Interface)
     * 喇叭/麥克風 (Loud speaker/Microphone)
     * 螢幕/攝影機 (Monitor/Camera)
@@ -25,12 +28,13 @@
 
 ![](https://i.imgur.com/HoaWsh7.png)
 
-#### 上課影片
-https://youtu.be/-CKb8SYPrms
 
+---
 
 ## 2. Digital Data (Signal) Representation and Communication
 ### 2.1 Analog to Digital Conversion in Brief
+
+上課影片：https://youtu.be/6WapSyQvxZU
 
 <p align="center">
 <a title="Tjwikcom / Public domain" href="https://commons.wikimedia.org/wiki/File:ADC_Symbol.svg"><img width="256" alt="ADC Symbol" src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f0/ADC_Symbol.svg/256px-ADC_Symbol.svg.png"></a>
@@ -41,9 +45,12 @@ https://youtu.be/-CKb8SYPrms
 * pptx [SpeechA2D.pptx](SpeechA2D.pptx)
 * pdf  [SpeechA2D.pdf](SpeechA2D.pdf)
 
-
+---
 
 ### 2.2 Why Digital?
+
+上課影片 2.2/2.3/2.4： https://youtu.be/5LWGdMSu-yk
+
 * 若單純只要做一個放大信號的動作(Amplifier)
     * Analog Transistor Amplifier Circuit
 一組雙極型電晶體放大器電路實例
