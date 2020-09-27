@@ -178,6 +178,7 @@ int main(void)
         * Fundamental frequency component: sine wave at $F_0$ Hz 
         * Harmonics: sine waves at $2F_0$Hz, $3F_0$Hz,...,and $(N-1)F_0$Hz.
             * 注意！ $N$ 代表 frame size
+        * 範例請看 [fft_example](fft_example) 資料夾下的 bmp 檔
 
 
 #### 3.3.2 Amplitude
