@@ -162,7 +162,7 @@ int main(void)
 * Human ear can hear sound ranging from 20 Hz to 20,000 Hz
 
 
-* 使用 [wavesurfer](https://sourceforge.net/projects/wavesurfer/) 軟體顯示的真實語音信號，語音內容為 "voice" 這個英文詞。
+* 使用 [wavesurfer](https://sourceforge.net/projects/wavesurfer/) 軟體顯示的真實語音信號，語音內容為 "voice" 這個英文詞。 [voice.wav](voice.wav)
 ![](https://i.imgur.com/mZVIJIN.png)
 
 * 觀察 "voice" 這個詞裡面穩定的 5 個週期所佔的時間，開始時間約為 0.1112 秒，結束時間約為 0.1352 秒，所以基本週期 (fundamental period) 大約是 (0.1352 - 0.1112)/5 = 0.0048 秒，基本頻率 (fundamental frequency) 大約是 5/(0.1352 - 0.1112) = 208.33 Hz
@@ -253,7 +253,7 @@ The threshold of hearing is generally reported as the RMS sound pressure of 20 m
 
 ---
 
-### 3.5 Mini Project 2 - 音訊的時頻分析 - 使用 spectrogram
+### [3.5 Mini Project 2 - 音訊的時頻分析 - 使用 spectrogram](mini_project-2-spectrogram.docx)
 
 
 
