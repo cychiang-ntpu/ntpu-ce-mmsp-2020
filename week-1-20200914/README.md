@@ -173,6 +173,7 @@ Sampling: A process of converting a signal (e.g., a function of continuous time 
 
 
 ### 2.4 Quantization
+上課影片 2.4：https://youtu.be/nKVdRY2g6Xg
 * Requires that each sample be represented in a fixed number of bits, called the ***sample size*** or equivalently the ***bit depth***.
 * Bit depth is for limiting ***precision*** with which each sample can be represented.
 * For digital images, each sample represents a color at a discrete point in a two dimensional image.
