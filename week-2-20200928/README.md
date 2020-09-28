@@ -24,12 +24,14 @@
 #### 3.1.2 聲波產生源 - 語音
 * 語音發音器官圖解剖圖
 ![](https://i.imgur.com/A23GhrQ.png)
+
     > Docio-Fernandez L., García Mateo C. (2015) Speech Production. In: Li S.Z., Jain A.K. (eds) Encyclopedia of Biometrics. Springer, Boston, MA. https://doi.org/10.1007/978-1-4899-7488-4_199
     
 * 聲帶振動影片 Sean Parker Institute for the Voice: https://voice.weill.cornell.edu/voice-evaluation/normal-voice-function
 
 * 語音發音的模型 - Tube Resonance Model
 ![](https://i.imgur.com/ka05oSY.png)
+
     > Docio-Fernandez L., García Mateo C. (2015) Speech Production. In: Li S.Z., Jain A.K. (eds) Encyclopedia of Biometrics. Springer, Boston, MA. https://doi.org/10.1007/978-1-4899-7488-4_199
 
 * Tube Resonance Model 影片： https://www.voicescienceworks.org/vocal-tract.html
@@ -50,7 +52,7 @@
 #### 3.1.3 聲波產生源 - 樂器
 
 * 吉他琴弦的振動：https://www.youtube.com/watch?v=ipY8d-qW9NA
-    >補充：影片中可以看到 aliasing的現象，因為琴絃震動的頻率比數位攝影的 frame rate 還要高。就比如下圖虛線為 637Hz 的弦波，而而數位訊號的取樣率只有 500Hz，在取樣後再還原為 analog 信號，就會變成 137Hz 的弦波
+    >補充：影片中可以看到 aliasing的現象，因為琴絃震動的頻率比數位攝影的 frame rate 還要高。就比如下圖虛線為 637Hz 的弦波，而數位訊號的取樣率只有 500Hz，在取樣後變成實線上的點，再還原為 analog 信號，就會變成 137Hz 的弦波
 ![](https://i.imgur.com/E7L7IPW.png)
 
 
@@ -65,22 +67,23 @@ https://www.youtube.com/watch?v=kpoanOlb3-w
 
 
 ---
-### 3.2 音訊的拾取及數位化
-由機械波轉換成電壓，在由電壓再轉換成數位訊號。
+### 3.2 音訊的拾取 (pick up) 及數位化 (digitalization)
+由機械波轉換成電壓，再由電壓轉換成數位訊號。
+
 
 * 由機械波轉換成電壓，記錄下來的振幅與時間的關係，就是 waveform (波形)
 
 ![](https://i.imgur.com/fVMDLkc.jpg)
 
-* 由電壓再轉換成數位訊號，以0或1的序列表示，一種最常使用來表示waveform 0或1的資訊方法，稱為 pulse code modulation (PCM)
+* 由電壓再轉換成數位訊號，以 0或1 的序列表示，一種最常使用來表示數位化 waveform 資料的 0或1 表示方法，稱為 **p**ulse **c**ode **m**odulation (PCM)
 
 ![](https://i.imgur.com/2H3Q5X3.png)
 
-* Pulse Code Modulation
+* Pulse Code Modulation (PCM)
     * Invented in 1937 by Alec Reeves, who at that time worked for International Telephone and Telegraph.
     * PCM is based on the methods of sampling and quantization applied to sound. 
-    * In that time, Reeves focused on ‘modulation’
-    * each sample be quantized and encoded in binary, and the bits be transmitted as pulses representing 0s and 1s.
+    * In that time, Reeves focused on ‘modulation’ (調變，我們晚一點再來談調變)
+    * each sample be quantized and encoded in binary, and the bits be transmitted as pulses representing 0s and 1s. [善心人士的網頁介紹](https://ijdk.pixnet.net/blog/post/343859750-pcm%3F-i2s%3F)
     * The term PCM is still used in digital audio to refer to the sampling and quantization process.
     * In fact, PCM files are files that are digitized but not compressed.
     * When you want to save your files in "raw" version, you can save them as PCM files.
@@ -93,7 +96,7 @@ https://www.youtube.com/watch?v=kpoanOlb3-w
     * 96 or 192 kHz for two-channel stereo DVD with 24 bits per channel).
 
 
-* Bit Depth - puts a limit on the precision with which you can represent each sample, determining the signal-to-quantization-noise ratio and dynamic range.
+* Bit Depth - puts a limit on the **precision** with which you can represent each sample, determining the signal-to-quantization-noise ratio and dynamic range.
     * 16bit/smp is a very common setting.
         * range of amplitude: integers on [-2^15, 2^15 - 1] 
         * can be represented by data type of ‘short’ (2 bytes)
@@ -142,7 +145,7 @@ int main(void)
 ```
 
 * Undersampling (aliasing)
-    * 在 Chapter 2 提過
+    * 在 Chapter 2 提過，[按我跳過去複習](https://github.com/cychiang-ntpu/ntpu-ce-mmsp-2020/blob/master/week-1-20200914/README.md#23-ideal-periodic-sampling)
 
 ---
 
@@ -192,19 +195,19 @@ Amplitude can be measured with a variety of units, including voltages, newtons/m
     * The average atmospheric pres-sure at sea level is approximately 105 Pa.
     * For sound waves, air pressure amplitude is defined as the average deviation from normal background atmospheric air pressure. 
     * For example, the threshold of human hearing (for a 1000 Hz sound wave) varies from the normal background atmospheric air pressure by 2 * 10-5 Pa, so this is its pressure amplitude. 注意！這裏 air pressure 都是用 root mean sqaure ([RMS](https://en.wikipedia.org/wiki/Root_mean_square)) 來計算的
-    * http://www.sengpielaudio.com/calculator-soundlevel.htm
+    * Loudness計算網頁：http://www.sengpielaudio.com/calculator-soundlevel.htm
     * Measuring sound in terms of pressure amplitude is intuitively easy to understand, but in practice decibels are a more common, and in many ways a more convenient, way to measure sound amplitude.
 ![](https://i.imgur.com/4WALRWe.png)
 
-* 聽覺相對參考：decibels-sound-pressure-level (dB_SPL)
+* 相對參考的單位：decibels-sound-pressure-level (dB_SPL)
     * A decibel is always based upon some agreed-upon reference point, and the reference point varies ac-cording to the phenomenon being measured. 
     * For sound, the reference point is the air pressure ampli-tude for the threshold of hearing. A decibel in the context of sound pressure level is called decibels-sound-pressure-level (dB_SPL). 
     ![](https://i.imgur.com/8ep3AT3.png)
     * Experimentally, it has been determined that if you increase the amplitude of an audio recording by 10 dB, it will sound about twice as loud. (Of course, these perceived differences are subjective.)
     * For most humans, a 3 dB change in amplitude is the smallest perceptible change.
-* 電腦儲存，請回顧 Signal-to-Quantization-Noise-Ratio (SQNR) and Dynamic Range in Terms of dB
+* 電腦儲存，請回顧 Chapter 2 的 [quantization](https://github.com/cychiang-ntpu/ntpu-ce-mmsp-2020/blob/master/week-1-20200914/README.md#24-quantization) 或是 Signal-to-Quantization-Noise-Ratio (SQNR) and Dynamic Range in Terms of dB
     * Sample Values
-        * Integers on [-2n, 2n - 1]; where n=16 is the bit depth of a digital file.
+        * Integers on [-2^n, 2^n - 1]; where n=16 is the bit depth of a digital file.
         ![](https://i.imgur.com/Xd1yIUv.png)
     * decibels-full-scale (dBFS)
         * If n=16, a sample value of ±32768 maps to 0 dBFS (the maximum amplitude possible for the system), and 10,000 maps to -10.3 dBFS; 1 maps to -90.3 dBFS.
@@ -223,10 +226,10 @@ Amplitude can be measured with a variety of units, including voltages, newtons/m
 #### 3.4.1 Perception - Frequency vs. Pitch
 * Online Tone Generator: https://www.szynalski.com/tone-generator/
 * 一般來講 Higher frequency --> higher pitch
-* 250Hz pure tone 和 260Hz pure tone的差異 vs. 1000Hz pure tone 和 1010Hz pure tone的差異
+* 250Hz pure tone 和 260Hz pure tone的差異 vs. 1000Hz pure tone 和 1010Hz pure tone的差異，哪一個比較有感覺？
 * 以音階為例，高八度是指 fundamental frequency 變為兩倍
 * 音準 --> pitch 很準，這個說法是人的聽感感知
-* Frequency 是客觀 (objective) 的量測，而 pitch 是主觀 (subjective) 的聽感感知
+* Frequency 是客觀 (***objective***) 的量測，而 pitch 是主觀 (***subjective***) 的聽感感知
 
 
 #### 3.4.2 Perception - Intensity/Energy vs. Loudness
@@ -236,12 +239,12 @@ Amplitude can be measured with a variety of units, including voltages, newtons/m
 in decibels (dB)
 * Loudness:
     * a subjective perception measured by human listeners
-    * human ears have different sensitivity to different sound frequency
+    * ***human ears have different sensitivity to different sound frequency***
     * in general, higher sound intensity means louder sound
 
 
 #### 3.4.3 Absolute threshold of hearing (ATH) and Equal-loudness contour
-The threshold of hearing is generally reported as the RMS sound pressure of 20 micropascals, i.e. 0 dB SPL, corresponding to a sound intensity of 0.98 pW/m2 at 1 atmosphere and 25 °C.[3] It is approximately the quietest sound a young human with undamaged hearing can detect at 1,000 Hz.[4] The threshold of hearing is frequency-dependent and it has been shown that the ear's sensitivity is best at frequencies between 2 kHz and 5 kHz,[5] where the threshold reaches as low as −9 dB SPL.
+The threshold of hearing is generally reported as the RMS sound pressure of 20 micropascals, i.e. 0 dB SPL, corresponding to a sound intensity of 0.98 pW/m^2 at 1 atmosphere and 25 °C. It is approximately the quietest sound a young human with undamaged hearing can detect at 1,000 Hz. The threshold of hearing is frequency-dependent and it has been shown that the ear's sensitivity is best at frequencies between 2 kHz and 5 kHz, where the threshold reaches as low as −9 dB SPL.
 
 ![](https://i.imgur.com/Ab6TMfI.png)
 
