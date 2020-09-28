@@ -2,8 +2,8 @@
 
 ## 3. Digital Audio Representation
 課程目標：
-1. 了解音訊的非常租淺的物理特性
-2. 快速回顧數位音訊的來源以及儲存方法
+1. 了解音訊非常租淺的物理特性
+2. 快速回顧音訊的來源以及儲存方法
 3. 音訊的量測以及人類對於音訊的感知
 4. 時頻譜 (spectrogram)
 
@@ -12,29 +12,30 @@
 ---
 
 ### 3.1 音訊/聲音的來源
+#### 3.1.1 聲波
 * 聲波是聲音的傳播形式。由物體（聲源）振動產生的機械波。在氣體和液體介質中傳播時是一種縱波(機械波的一種)，但在固體介質中傳播時可能混有橫波(機械波的一種)。
-* 任何器官所接收的聲音頻率都有其範圍限制。人耳可以聽到的聲波的頻率一般在20Hz至2×{\displaystyle 10^{4}}10^{{4}}Hz之間。其他動物的聽覺頻率範圍有所不同，狗可以聽到50000Hz的超聲波，但無法聽到15Hz以下的聲音。
+* 任何器官所接收的聲音頻率都有其範圍限制。人耳可以聽到的聲波的頻率一般在 20Hz 至 20000Hz 之間。其他動物的聽覺頻率範圍有所不同，狗可以聽到 50000Hz 的超聲波，但無法聽到 15Hz 以下的聲音。
 * 縱波(或疏密波)：因為物質的震動造成傳播介質中質點的振動，而這個振動方向與波的傳播方向平行，的縱波(或疏密波)
 * 橫波，又稱為高低波，是介質振動方向和波行進方向垂直的一種波。若此波沿著x軸移動，則介質的振動方向為與x軸垂直的方向上。舉例來說繩波就是一種橫波。
-* When air molecules are squeezed together, air pressure rises. When they move apart, air pressure falls
-* 語音
+* 我們接觸的環境，聲波大多以空氣作為媒介傳輸，當空氣粒子擠在一起被壓縮，則氣壓增加，當空氣粒子分散較稀疏，則氣壓降低
 
+---
+
+#### 3.1.2 聲波產生源 - 語音
+* 語音發音器官圖解剖圖
 ![](https://i.imgur.com/A23GhrQ.png)
-> Docio-Fernandez L., García Mateo C. (2015) Speech Production. In: Li S.Z., Jain A.K. (eds) Encyclopedia of Biometrics. Springer, Boston, MA. https://doi.org/10.1007/978-1-4899-7488-4_199
+    > Docio-Fernandez L., García Mateo C. (2015) Speech Production. In: Li S.Z., Jain A.K. (eds) Encyclopedia of Biometrics. Springer, Boston, MA. https://doi.org/10.1007/978-1-4899-7488-4_199
+    
+* 聲帶振動影片 Sean Parker Institute for the Voice: https://voice.weill.cornell.edu/voice-evaluation/normal-voice-function
 
-
+* 語音發音的模型 - Tube Resonance Model
 ![](https://i.imgur.com/ka05oSY.png)
-> Docio-Fernandez L., García Mateo C. (2015) Speech Production. In: Li S.Z., Jain A.K. (eds) Encyclopedia of Biometrics. Springer, Boston, MA. https://doi.org/10.1007/978-1-4899-7488-4_199
+    > Docio-Fernandez L., García Mateo C. (2015) Speech Production. In: Li S.Z., Jain A.K. (eds) Encyclopedia of Biometrics. Springer, Boston, MA. https://doi.org/10.1007/978-1-4899-7488-4_199
+
+* Tube Resonance Model 影片： https://www.voicescienceworks.org/vocal-tract.html
 
 
-https://www.voicescienceworks.org/vocal-tract.html
-
-
-
-Sean Parker Institute for the Voice: https://voice.weill.cornell.edu/voice-evaluation/normal-voice-function
-
-
-Vibration of the Vocal Folds: https://www.youtube.com/watch?v=kfkFTw3sBXQ
+* Vibration of the Vocal Folds 動畫: https://www.youtube.com/watch?v=kfkFTw3sBXQ
 
 * Digital Model for Speech Production
 ![](https://i.imgur.com/VNGmOQr.png)
@@ -42,24 +43,25 @@ Vibration of the Vocal Folds: https://www.youtube.com/watch?v=kfkFTw3sBXQ
 * Source-Filter Model and Correponding Spectra
 ![](https://i.imgur.com/X8mzLRN.png)
 
-https://highscope.ch.ntu.edu.tw/wordpress/?p=1008
+* 聲帶的的結構及發聲原理：https://highscope.ch.ntu.edu.tw/wordpress/?p=1008
 
 ---
 
-樂器：
-烏克麗麗：錄影彈空弦(G,C,E,A)、錄影彈和弦(C,F,G,C)
+#### 3.1.3 聲波產生源 - 樂器
 
-鋼琴：
-鋼琴的「擊弦機制」
+* 吉他琴弦的振動：https://www.youtube.com/watch?v=ipY8d-qW9NA
+    >補充：影片中可以看到 aliasing的現象，因為琴絃震動的頻率比數位攝影的 frame rate 還要高。就比如下圖虛線為 637Hz 的弦波，而而數位訊號的取樣率只有 500Hz，在取樣後再還原為 analog 信號，就會變成 137Hz 的弦波
+![](https://i.imgur.com/E7L7IPW.png)
+
+
+* 鋼琴：鋼琴的「擊弦機制」
 https://tw.yamaha.com/zh/products/contents/musical_instrument_guide/piano/mechanism/mechanism003.html
 
-銅鈸:
+* 銅鈸和小鼓:
 麵包超人主題曲片頭：https://www.youtube.com/watch?v=XT53CXcsL3Y
-銅鈸 1000 times
+* 銅鈸 slow motion 1000x：
 https://www.youtube.com/watch?v=kpoanOlb3-w
-
-小鼓
-https://www.youtube.com/watch?v=tM8WyhB6zYo
+* 小鼓 slow motion：https://www.youtube.com/watch?v=tM8WyhB6zYo
 
 
 ---
