@@ -1,38 +1,5 @@
-# ntpu-ce-mmsp-2020-Week-1-20200914
-
-## 1. Introduction to Multimedia Signal Processing
-
-上課影片 https://youtu.be/-CKb8SYPrms
-
-* 使用者介面/人機介面 (User Interface/Human-Machine Interface)
-    * 喇叭/麥克風 (Loud speaker/Microphone)
-    * 螢幕/攝影機 (Monitor/Camera)
-    * 滑鼠/鍵盤/手寫 (Mouse/keyboard/handwriting)
-* 數位信號 (Digital Signals)
-    * 文字 (Text)
-        * 網頁 (WebPages)
-        * 電子文件 (Electronic documents)
-    * 影像 (Image)
-        * 照片(Photograph)
-        * 影片(Video frame)
-    * 聲音 (Audio)
-        * 聲音事件 (Audio event)
-        * 音樂 (Music)
-        * 語音 (Speech)
-* 系統 (Systems)
-    * 壓縮/解壓縮 (compression, related to transmission)
-    * 搜尋引擎 (Search engine)
-    * 資訊擷取 (Information retrieval)
-    * 內容識別 (content recognition/identification)
-
-
-![](https://i.imgur.com/HoaWsh7.png)
-
-
----
-
-## 2. Digital Data (Signal) Representation and Communication
-### 2.1 Analog to Digital Conversion in Brief
+# 2. Digital Data (Signal) Representation and Communication
+## 2.1 Analog to Digital Conversion in Brief
 
 上課影片：https://youtu.be/6WapSyQvxZU
 
@@ -47,7 +14,7 @@
 
 ---
 
-### 2.2 Why Digital?
+## 2.2 Why Digital?
 
 上課影片 2.2/2.3/2.4： https://youtu.be/5LWGdMSu-yk
 
@@ -74,7 +41,7 @@
 * Digital 優點 (Pros)
 * Digital 缺點 (Cons)
 
-### 2.3 Ideal Periodic Sampling
+## 2.3 Ideal Periodic Sampling
 Sampling: A process of converting a signal (e.g., a function of continuous time or space) into a numeric sequence (a function of discrete time or space)
 * For images the sample points are evenly separated in space
 * For sound the sample points are evenly separated in time
@@ -124,12 +91,12 @@ Sampling: A process of converting a signal (e.g., a function of continuous time 
 
 --- 
 
-#### C/D
+### C/D
 ![](https://i.imgur.com/p9L0Ftn.png)
 
 ---
 
-#### D/C
+### D/C
 ![](https://i.imgur.com/XPRJlUP.png)
 
 ---
@@ -172,7 +139,7 @@ Sampling: A process of converting a signal (e.g., a function of continuous time 
 
 
 
-### 2.4 Quantization
+## 2.4 Quantization
 上課影片 2.4：https://youtu.be/nKVdRY2g6Xg
 * Requires that each sample be represented in a fixed number of bits, called the ***sample size*** or equivalently the ***bit depth***.
 * Bit depth is for limiting ***precision*** with which each sample can be represented.
@@ -259,7 +226,7 @@ Example of quantization noise. (a) Unquantized samples of the signal x[n] = 0.99
 </p>
 
 
-### 2.5 Mini Project 1 - Generating Sine Waves
+## 2.5 Mini Project 1 - Generating Sine Waves
 撰寫一支 C 語言程式 sinegen_xxxxxxxxx.c，其中 xxxxxxxxx 代表你的學號，在 compile 和 link 後的執行檔，可以使用以下方法產生弦波的 wav file 和計算 SQNR：
 
 `sinegen_xxxxxxxxx fs m f A T  1> fn.wav 2> sqnr.txt`
