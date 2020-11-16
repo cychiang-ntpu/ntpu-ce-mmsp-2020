@@ -1,4 +1,4 @@
-# 2. Digital Data (Signal) Representation and Communication
+# 2. Digital Data (Signal) Representation
 ## 2.1 Analog to Digital Conversion in Brief
 
 上課影片：https://youtu.be/6WapSyQvxZU
