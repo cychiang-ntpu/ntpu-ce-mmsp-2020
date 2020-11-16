@@ -1,6 +1,4 @@
-# ntpu-ce-mmsp-2020-Week-2-20200928
-
-## 3. Digital Audio Representation
+# 3. Digital Audio Representation
 課程目標：
 1. 了解音訊非常粗淺的物理特性
 2. 快速回顧音訊的來源以及儲存方法
@@ -10,11 +8,11 @@
 
 ---
 
-### 3.1 音訊/聲音的來源
+## 3.1 音訊/聲音的來源
 
 3.1 以及 3.2 上課影片：https://youtu.be/JtaRO_yLvtY
 
-#### 3.1.1 聲波
+### 3.1.1 聲波
 * 聲波是聲音的傳播形式。由物體（聲源）振動產生的機械波。在氣體和液體介質中傳播時是一種縱波(機械波的一種)，但在固體介質中傳播時可能混有橫波(機械波的一種)。
 * 任何器官所接收的聲音頻率都有其範圍限制。人耳可以聽到的聲波的頻率一般在 20Hz 至 20000Hz 之間。其他動物的聽覺頻率範圍有所不同，狗可以聽到 50000Hz 的超聲波，但無法聽到 15Hz 以下的聲音。
 * 縱波(或疏密波)：因為物質的震動造成傳播介質中質點的振動，而這個振動方向與波的傳播方向平行，的縱波(或疏密波)
@@ -23,7 +21,7 @@
 
 ---
 
-#### 3.1.2 聲波產生源 - 語音
+### 3.1.2 聲波產生源 - 語音
 * 語音發音器官圖解剖圖
 
 ![](https://i.imgur.com/A23GhrQ.png)
@@ -55,7 +53,7 @@
 
 ---
 
-#### 3.1.3 聲波產生源 - 樂器
+### 3.1.3 聲波產生源 - 樂器
 
 * 吉他琴弦的振動：https://www.youtube.com/watch?v=ipY8d-qW9NA
     >補充：影片中可以看到 aliasing的現象，因為琴絃震動的頻率比數位攝影的 frame rate 還要高。就比如下圖虛線為 637Hz 的弦波，而數位訊號的取樣率只有 500Hz，在取樣後變成實線上的點，再還原為 analog 信號，就會變成 137Hz 的弦波
@@ -73,7 +71,7 @@ https://www.youtube.com/watch?v=kpoanOlb3-w
 
 
 ---
-### 3.2 音訊的拾取 (pick up) 及數位化 (digitalization)
+## 3.2 音訊的拾取 (pick up) 及數位化 (digitalization)
 由機械波轉換成電壓，再由電壓轉換成數位訊號。
 
 
@@ -155,8 +153,8 @@ int main(void)
 
 ---
 
-### 3.3 音訊的基礎量測
-#### 3.3.1 Frequency
+## 3.3 音訊的基礎量測
+### 3.3.1 Frequency
 上課錄影: https://youtu.be/TEsLYoVHfxI
 * Refers to the number of complete back-and-forth cycles of vibrational motion of the medium particles per unit of time
 * Unit for frequency: Hz (Hertz)
@@ -193,7 +191,7 @@ int main(void)
         * 範例請看 [fft_example](fft_example) 資料夾下的 bmp 檔
 
 
-#### 3.3.2 Amplitude
+### 3.3.2 Amplitude
 Amplitude can be measured with a variety of units, including voltages, newtons/m^2, or the unitless measure called decibels.
 
 * 機械波量測：Newtons/meter^2 (abbreviated Pa or N/m^2)
@@ -229,8 +227,8 @@ Amplitude can be measured with a variety of units, including voltages, newtons/m
 
 ---
 
-### 3.4 音訊的人類感知
-#### 3.4.1 Perception - Frequency vs. Pitch
+## 3.4 音訊的人類感知
+### 3.4.1 Perception - Frequency vs. Pitch
 * Online Tone Generator: https://www.szynalski.com/tone-generator/
 * 一般來講 Higher frequency --> higher pitch
 * 250Hz pure tone 和 260Hz pure tone的差異 vs. 1000Hz pure tone 和 1010Hz pure tone的差異，哪一個比較有感覺？
@@ -239,7 +237,7 @@ Amplitude can be measured with a variety of units, including voltages, newtons/m
 * Frequency 是客觀 (***objective***) 的量測，而 pitch 是主觀 (***subjective***) 的聽感感知
 
 
-#### 3.4.2 Perception - Intensity/Energy vs. Loudness
+### 3.4.2 Perception - Intensity/Energy vs. Loudness
 * Sound intensity:
     * an objective measurement
     * can be measured with auditory devices
@@ -250,13 +248,13 @@ in decibels (dB)
     * in general, higher sound intensity means louder sound
 
 
-#### 3.4.3 Absolute threshold of hearing (ATH) and Equal-loudness contour
+### 3.4.3 Absolute threshold of hearing (ATH) and Equal-loudness contour
 The threshold of hearing is generally reported as the RMS sound pressure of 20 micropascals, i.e. 0 dB SPL, corresponding to a sound intensity of 0.98 pW/m^2 at 1 atmosphere and 25 °C. It is approximately the quietest sound a young human with undamaged hearing can detect at 1,000 Hz. The threshold of hearing is frequency-dependent and it has been shown that the ear's sensitivity is best at frequencies between 2 kHz and 5 kHz, where the threshold reaches as low as −9 dB SPL.
 
 ![](https://i.imgur.com/Ab6TMfI.png)
 
 
-#### 3.4.4 Mel Scale and Bark Scale
+### 3.4.4 Mel Scale and Bark Scale
 * Mel Scale
 ![](https://i.imgur.com/DIN4RFz.png)
 * Bark Scale
@@ -266,7 +264,7 @@ The threshold of hearing is generally reported as the RMS sound pressure of 20 m
 
 ---
 
-### [3.5 Mini Project 2 - 音訊的時頻分析 - 使用 spectrogram](mini_project-2-spectrogram.docx)
+## [3.5 Mini Project 2 - 音訊的時頻分析 - 使用 spectrogram](mini_project-2-spectrogram.docx)
 
 
 
