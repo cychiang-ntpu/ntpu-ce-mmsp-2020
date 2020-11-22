@@ -1,4 +1,9 @@
 # 4. Fundamentals of DSP
+
+###### tags: `Multimedia Signal Processing (U3329, Fall, 2020)`
+###### 通訊系 江振宇 副教授
+
+
 ## 4.1 Simulating RC circuit with DSP
 
 ### 使用微分方程分析
