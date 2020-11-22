@@ -184,7 +184,7 @@ void output_bmp(ImgRGB **RGB, FILE* outfile, Bitmap bmpheader, int skip){
 
 	for (x = 0; x<bmpheader.height; x++){
 		for (y = 0; y<bmpheader.width; y++){
-			if (y < 100 && x<100) { // let pixels at x<100 and y<100 be zeros
+			if (y < 300 && x<400) { // let pixels at x<300 and y<400 be zeros
 				RGB[x][y].B = 0;
 				RGB[x][y].G = 0;
 				RGB[x][y].R = 0;
