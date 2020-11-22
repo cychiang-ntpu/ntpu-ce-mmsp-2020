@@ -1,6 +1,9 @@
 # 2. Digital Data (Signal) Representation
 ## 2.1 Analog to Digital Conversion in Brief
 
+###### tags: `Multimedia Signal Processing (U3329, Fall, 2020)`
+###### 通訊系 江振宇 副教授
+
 上課影片：https://youtu.be/6WapSyQvxZU
 
 <p align="center">
