@@ -1,5 +1,9 @@
 # 1. Introduction to Multimedia Signal Processing
 
+###### tags: `Multimedia Signal Processing (U3329, Fall, 2020)`
+###### 通訊系 江振宇 副教授
+
+
 上課影片 https://youtu.be/-CKb8SYPrms
 
 * 使用者介面/人機介面 (User Interface/Human-Machine Interface)
