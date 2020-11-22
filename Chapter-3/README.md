@@ -1,4 +1,9 @@
 # 3. Digital Audio Representation
+
+###### tags: `Multimedia Signal Processing (U3329, Fall, 2020)`
+###### 通訊系 江振宇 副教授
+
+
 課程目標：
 1. 了解音訊非常粗淺的物理特性
 2. 快速回顧音訊的來源以及儲存方法
