@@ -18,7 +18,63 @@
 ### 5.1.1. Bitmapping
 bitmap images 是由定義每一個像素 (pixel, picture element) 的顏色產生的數位資料，又稱為 pixmaps 或 raster graphics。可由以下方法產生：
 1. digital cameras: 手機、專業數位相機、Webcam
-2. scanners:
+線上其他資源:
+https://blog.xuite.net/g5223086/twblog1/168080390-%E6%95%B8%E4%BD%8D%E7%9B%B8%E6%A9%9F%E7%9A%84%E6%94%9D%E5%BD%B1%E5%8E%9F%E7%90%86
+https://kknews.cc/photography/e45j9my.html
+https://kknews.cc/zh-tw/digital/39nxley.html
+https://en.wikipedia.org/wiki/Digital_camera
+https://kknews.cc/photography/e4rq6oy.html
+    * Analog Camera Photography
+        * Film that is covered with silver-laden (鹵化銀?) is exposed to light
+        * There are three layers on photographic film, one sensitive to red, one to green and one to blue light (assuming the use of RGB color)
+        * At each point across a continuous plane, all three color components are sensed simultaneously
+        * The degree to which the silver atoms gather together measures the amount of light to which the film is exposed
+    * Analog vs. Digital Photography
+        * Analogy photography measures the incident light continuously across the focal plane while digital photography samples it only at discrete points.
+        * Another difference is that it is more difficult for digital camera to sense all three color components i.e., red, green and blue at each sample point.
+        * The constraints on sampling color and the use of interpolation to “fill the blanks” in digital sampling can lead to color aliasing.
+    * [Digital single-lens reflex camera](https://en.wikipedia.org/wiki/Digital_single-lens_reflex_camera)
+        * As a counterpart of [Twin-lens reflex camera](https://en.wikipedia.org/wiki/Twin-lens_reflex_camera)
+        ![](https://i.imgur.com/BRGfAKx.png)
+
+    * Charge-Coupled Device (CCD)
+        * Many current digital cameras use charge-coupled device (CCD) technology to sense light and thereby color
+    * CMOS-Complementary Metal-Oxide Semiconductor is an alternative technology for digital photography
+    * CCD
+        * Consists of two-dimensional array of photosites
+        * Each photosite correspond to one sample (one pixel in the digital image)
+        * The number of photosites determines the limits of camera’s resolution
+    * To sense red, green or blue at a discrete point, the sensor at that photosite is covered with red, green or blue color filter
+    * But the question is:
+        * Should all three color components be sensed simultaneously at each photosite?
+        * Should they be sensed at different moments when the picture is taken?
+        * Or should only one color component per photosite be sensed?
+    * There are various CCD designs in current technology each with its own advantages and disadvantages
+    * Possible solutions:
+        * The incident light can be divided into three beams
+            * Three sensors are used at each photosite, each covered with a filter that allows only red, green or blue to be sensed.
+            * Is an expensive solution and creates a bulkier camera
+        * The sensor is can be rotated when the picture is taken so that it takes in information about red, green and blue light in succession
+            * The three colors are not sensed at precisely the same moment, so the subject being photographed needs to be still
+        * A more recently developed technology ([Foveon X3](https://zh.wikipedia.org/wiki/Foveon_X3%E6%84%9F%E5%85%89%E5%85%83%E4%BB%B6)) uses silicon for the sensors in a method called vertical stacking.
+            * Different depths of silicon absorb different wavelengths of light, all three color components can be detected at one photosite.
+        * A less expensive method of color detection uses a color array to detect only one color component at each photosite
+            * Interpolation is then used to derive the other two color components based on information from neighbouring sites
+            * It is the interpolation that can lead to color aliasing
+            * [Bayer Color Filter Array](https://zh.wikipedia.org/wiki/%E6%8B%9C%E7%88%BE%E6%BF%BE%E8%89%B2%E9%8F%A1)
+                * In the 4 x 4 array shown in the figure, the letter in each block indicates which color is to be detected at each site.
+                * The pattern shown here is called a Bayer filter array, or simply a Bayer filter. (It is also possible to use cyan-magenta-yellow combination)
+                * There are twice as many green sensors as blue or red, human eye is more sensitive to green
+                * The array shown here is just a small portion of what would be on a CCD
+
+        
+
+
+
+
+
+3. scanners:
+將實體物建照光，然後使用如 digital camera 的方法取樣及量化 pixel value。 
     ![](https://i.imgur.com/wbdshk2.jpg)
 3. paint programs: 小畫家、CorelDRAW、Adobe Fresco、Adobe Photoshop、平板觸控筆(如Apple pencil)+筆記程式、[GNU Paint](https://www.gnu.org/software/gpaint/)、[GIMP](https://www.gimp.org/)
 
@@ -322,6 +378,7 @@ void output_bmp(ImgRGB **RGB, FILE* outfile, Bitmap bmpheader, int skip){
 ```
 
 [input](input.bmp)
+
 
 
 
