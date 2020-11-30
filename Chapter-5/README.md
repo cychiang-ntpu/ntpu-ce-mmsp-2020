@@ -19,7 +19,7 @@
 bitmap images 是由定義每一個像素 (pixel, picture element) 的顏色產生的數位資料，又稱為 pixmaps 或 raster graphics。可由以下方法產生：
 1. digital cameras: 手機、專業數位相機、Webcam
 線上其他資源:
-https://blog.xuite.net/g5223086/twblog1/168080390-%E6%95%B8%E4%BD%8D%E7%9B%B8%E6%A9%9F%E7%9A%84%E6%94%9D%E5%BD%B1%E5%8E%9F%E7%90%86
+> https://blog.xuite.net/g5223086/twblog1/168080390-%E6%95%B8%E4%BD%8D%E7%9B%B8%E6%A9%9F%E7%9A%84%E6%94%9D%E5%BD%B1%E5%8E%9F%E7%90%86
 https://kknews.cc/photography/e45j9my.html
 https://kknews.cc/zh-tw/digital/39nxley.html
 https://en.wikipedia.org/wiki/Digital_camera
@@ -36,7 +36,6 @@ https://kknews.cc/photography/e4rq6oy.html
     * [Digital single-lens reflex camera](https://en.wikipedia.org/wiki/Digital_single-lens_reflex_camera)
         * As a counterpart of [Twin-lens reflex camera](https://en.wikipedia.org/wiki/Twin-lens_reflex_camera)
         ![](https://i.imgur.com/BRGfAKx.png)
-
     * Charge-Coupled Device (CCD)
         * Many current digital cameras use charge-coupled device (CCD) technology to sense light and thereby color
     * CMOS-Complementary Metal-Oxide Semiconductor is an alternative technology for digital photography
@@ -68,12 +67,58 @@ https://kknews.cc/photography/e4rq6oy.html
                 * The array shown here is just a small portion of what would be on a CCD
 
         
+---
 
+#### Stop to Think! Why RGB?
+* Color Perception and Representation
+    * Physically, color is composed of electromagnetic waves
+    * For humans, the wavelength of visible colors fall between approximately 370 and 780 nanometers (nm), i.e., 1nm = $`10^{-9}`$ meters
+    * These waves fall upon the color receptors of the eyes, and in a way not completely understood, the human brain translates the interaction between the waves and the eyes as color perception
+    * It is possible to create pure color composed of a single wavelength, e.g., by means of a laser
+    * But most colors we see around us are almost always produced by a combination of wavelengths
+    * Green cover of a book may look pure green to you, but a spectrograph will break it up into its components wavelengths, producing a spectral density function $`P(\lambda)`$
+    * A spectral density function shows the contribution of the wavelengths λ to a given perceived color as λ varies across the visible spectrum
+    * Spectral density functions are one mathematical way to represent colors, but not very convenient way for computers
+    * ***One problem is that, more than one spectral density curve can represent two colors that look the same***
+    * It is possible to represent  a color by means of a simpler spectral density graph (Hue Saturation Value –HSV and Hue Lightness Saturation - HLS color modes uses this color representation)
+    * Each color in the spectrum can be characterised by a unique graph that has a simple shape
+    * The graph for each color gives the color’s dominant wavelength, equivalent to the hue; its saturation (i.e., color purity) and its luminance.
+        * The dominant wavelength is the wavelength at the spike in the graph
+        * The area beneath the curve indicates the luminance L
+        * Saturation S is the ratio of the area of the spike to the total area.
+        ![](https://i.imgur.com/RMiUdru.png)
+    * The dimensions of hue, saturation and brightness do not correspond very well to the computer monitors
+    * ***Cathode Ray Tube (CRT) monitors – display colored light through a combination of red, green and blue phosphors, which light up at varying intensities when excited by electron bean***
+    * Liquid Crystal Display (LCD) panels – display color with neighboring pixels of red, green and blue that are either lit up or masked by the liquid crystals 
+    * So, what is the best way to model color for the computer?
+    * There is no simple answer since different models have advantages in different situations.
+* RGB Color Mode
+    * Varying combinations of three primary colors can create a wide range of colors
+    * Three colors are primary with respect to one another if no one of them can be created as a combination of the other two
+    * Red, Gree and Blue are good choices as primary colors because the cones of the eyes (color receptors) are especially sensitive to these hues
+    * C = rR + gG + bB
+        * where r, g and b indicate the relative amounts of red, green and blue energy respectively. Also referred to as the values of the RGB color components  or (color channels in application programs)
+        * R, G and B are constant values base on the wavelengths chosen for the red, green and blue components
+    * The color space for the RGB color model is easy to depict graphically
+    * Let R, G and B correspond to three axes in 3D space
+    * The relative amount of red, green and blue are normalized to vary between 0 and 1
+    * The origin (0,0,0) of the RGB cube correspond to black and white is the value (1,1,1). 
+    * The remaining corners correspond to red, green and blue and their complementary colors i.e., cyan (青藍色), magenta (品紅色) and yellow respectively
+    ![](https://i.imgur.com/egGzuqk.png)
+    * For example (1, 0.65, 0.15) is light orange etc
+    * Shades of gray have equal proportions of red, green and blue and lie along the line between (0,0,0) and (1,1,1).
+        * All grayscale values have equal amount of R, G and B
+        * Standard equation is used to convert RGB to grayscale
+        * Let an RGB color pixel be given by (R, G, B), where R, G and B are red, green and blue color components respectively. The corresponding gray value is given by (L, L, L), where L = 0.30R + 0.59G + 0.11B
+        * Since all three color components are equal in gray pixel, only one of the three values needs to be stored. 
+        * Thus a 24-bit RGB pixel can be stored as an 8-bit grayscale pixel
+* CMY Color Model ...
+* HSV and HLS Color Models ... 
+* Luminance and Chrominance Color Models ...YIQ,YCbCr,YUV...
 
+---
 
-
-
-3. scanners:
+2. scanners:
 將實體物建照光，然後使用如 digital camera 的方法取樣及量化 pixel value。 
     ![](https://i.imgur.com/wbdshk2.jpg)
 3. paint programs: 小畫家、CorelDRAW、Adobe Fresco、Adobe Photoshop、平板觸控筆(如Apple pencil)+筆記程式、[GNU Paint](https://www.gnu.org/software/gpaint/)、[GIMP](https://www.gimp.org/)
@@ -388,6 +433,8 @@ void output_bmp(ImgRGB **RGB, FILE* outfile, Bitmap bmpheader, int skip){
 ---
 
 ## 5.4 Frequency in Digital Images
+請看 Discrete Cosine Transform
+https://hackmd.io/@cychiang-ntpu/ryTaeHjYv
 
 ---
 
@@ -395,4 +442,4 @@ void output_bmp(ImgRGB **RGB, FILE* outfile, Bitmap bmpheader, int skip){
 
 ---
 
-## 5.6 Color
+## 5.6 Color Model in Deep
