@@ -19,7 +19,7 @@
 bitmap images 是由定義每一個像素 (pixel, picture element) 的顏色產生的數位資料，又稱為 pixmaps 或 raster graphics。可由以下方法產生：
 1. digital cameras: 手機、專業數位相機、Webcam
 線上其他資源:
-https://blog.xuite.net/g5223086/twblog1/168080390-%E6%95%B8%E4%BD%8D%E7%9B%B8%E6%A9%9F%E7%9A%84%E6%94%9D%E5%BD%B1%E5%8E%9F%E7%90%86
+> https://blog.xuite.net/g5223086/twblog1/168080390-%E6%95%B8%E4%BD%8D%E7%9B%B8%E6%A9%9F%E7%9A%84%E6%94%9D%E5%BD%B1%E5%8E%9F%E7%90%86
 https://kknews.cc/photography/e45j9my.html
 https://kknews.cc/zh-tw/digital/39nxley.html
 https://en.wikipedia.org/wiki/Digital_camera
@@ -433,6 +433,8 @@ void output_bmp(ImgRGB **RGB, FILE* outfile, Bitmap bmpheader, int skip){
 ---
 
 ## 5.4 Frequency in Digital Images
+請看 Discrete Cosine Transform
+https://hackmd.io/@cychiang-ntpu/ryTaeHjYv
 
 ---
 
